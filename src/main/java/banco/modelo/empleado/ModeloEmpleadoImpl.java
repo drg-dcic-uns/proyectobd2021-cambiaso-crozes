@@ -1,6 +1,5 @@
 package banco.modelo.empleado;
 
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -30,7 +29,6 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 
 	private static Logger logger = LoggerFactory.getLogger(ModeloEmpleadoImpl.class);	
 
-	
 	private Integer legajo = null;
 	
 	public ModeloEmpleadoImpl() {
@@ -48,13 +46,35 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		 *      Si la autenticación no es exitosa porque el legajo no es válido o el password es incorrecto
 		 *      deberá retornar falso y si hubo algún otro error deberá producir una excepción.
 		 */
+		boolean resultado = false;
 		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */
-		this.legajo = 1;
-		return true;
-		// Fin datos estáticos de prueba.
+		if(legajo == null || password == null) {
+			throw new Exception("Los parámetros no son válidos");
+		}
+
+		boolean conexion = conectar("empleado", "empleado");
+
+		if (conexion) {
+			try {
+				int leg = Integer.parseInt(legajo);
+				String sql = "SELECT legajo, password " + 
+							"FROM Empleado " +
+							"WHERE legajo = " + leg + " AND password = MD5(" + password + ")";
+				ResultSet rs = this.consulta(sql);
+				if(rs != null) {
+					if(rs.next()) {
+						this.legajo = rs.getInt("legajo");
+						resultado = true;
+					}
+					rs.close();
+				}
+			}
+			catch (java.sql.SQLException ex)
+			{
+				throw new SQLException("Error al autenticar el empleado"); 
+			}
+		}
+		return resultado;
 	}
 	
 	@Override
@@ -70,20 +90,32 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	}	
 	
 	@Override
-	public ArrayList<String> obtenerTiposDocumento() {
+	public ArrayList<String> obtenerTiposDocumento() throws Exception {
 		logger.info("recupera los tipos de documentos.");
 		/** 
 		 * TODO Debe retornar una lista de strings con los tipos de documentos. 
 		 *      Deberia propagar una excepción si hay algún error en la consulta.
 		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */
 		ArrayList<String> tipos = new ArrayList<String>();
-		tipos.add("DNI");
+		
+		try {
+			String sql = "SELECT tipo_doc, COUNT(tipo_doc) " + 
+						 "FROM Empleado " +
+						 "GROUP BY tipo_doc";
+			ResultSet rs = this.consulta(sql);
+			if(rs != null) {
+				while(rs.next()) {
+					tipos.add(rs.getString("tipo_doc"));
+				}
+				rs.close();
+			}
+		}
+		catch (java.sql.SQLException ex)
+		{
+			throw new Exception("Error al obtener tipos de documentos"); 
+		}
+
 		return tipos;
-		// Fin datos estáticos de prueba.
 	}	
 
 	@Override
@@ -96,13 +128,29 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		 *      Deberia propagar una excepción si hay algún error de conexión o 
 		 *      no encuentra el monto dentro del [monto_inf,monto_sup] y la cantidadMeses.
 		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */
-		double tasa = 23.00;
+		double tasa = 0;
+
+		try {
+			String sql = "SELECT tasa " + 
+						 "FROM Tasa_Prestamo " + 
+						 "WHERE periodo = " + cantidadMeses + " AND monto_inf <= " + monto + " AND monto_sup >= " + monto;
+			ResultSet rs = this.consulta(sql);
+			if(rs != null) {
+				if(rs.next()) { 
+					tasa = rs.getDouble("tasa");
+				}
+			}
+			else {
+				throw new Exception("No se encontro una tasa con las caracteristicas pedidas");
+			}
+			rs.close();
+		}
+		catch (java.sql.SQLException ex)
+		{
+			throw new Exception("Error al obtener la tasa del préstamo"); 
+		}
+
    		return tasa;
-     	// Fin datos estáticos de prueba.
 	}
 
 	@Override
@@ -127,25 +175,31 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 	@Override
 	public ArrayList<Integer> obtenerCantidadMeses(double monto) throws Exception {
 		logger.info("recupera los períodos (cantidad de meses) según el monto {} para el prestamo.", monto);
-
 		/** 
 		 * TODO Debe buscar los períodos disponibles según el monto. 
 		 *      Deberia propagar una excepción si hay algún error de conexión o 
-		 *      no encuentra el monto dentro del [monto_inf,monto_sup].
-		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */		
+		 *      no encuentra el monto dentro del [monto_inf,monto_sup] .
+		 */ 
 		ArrayList<Integer> cantMeses = new ArrayList<Integer>();
-		cantMeses.add(9);
-		cantMeses.add(18);
-		cantMeses.add(27);
-		cantMeses.add(54);
-		cantMeses.add(108);
-		
+
+		try {
+			String sql = "SELECT periodo " + 
+						 "FROM Tasa_Prestamo " +
+						 "WHERE monto_sup >= " + monto + " AND monto_inf <= " + monto;
+			ResultSet rs = this.consulta(sql);
+			if(rs != null) {
+				while(rs.next()) { 
+					cantMeses.add(rs.getInt("periodo"));
+				}
+				rs.close();
+			}
+		}
+		catch (java.sql.SQLException ex)
+		{
+			throw new Exception("Error al obtener el período para el prestamo"); 
+		}
+
 		return cantMeses;
-		// Fin datos estáticos de prueba.
 	}
 
 	@Override	
@@ -159,11 +213,26 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		 *      Si hay una excepción la propaga con un mensaje apropiado.
 		 */
 		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */
-		return null;
-		// Fin datos estáticos de prueba.
+		Integer nro_prestamo = null;
+		
+		try {
+			String sql = "SELECT nro_prestamo " + 
+						 "FROM Prestamo NATURAL JOIN Pago " +
+						 "WHERE nro_cliente = " + nroCliente + " AND fecha_pago is NULL";
+			ResultSet rs = this.consulta(sql);
+			if(rs != null) {
+				if(rs.next()) { 
+					nro_prestamo = rs.getInt("nro_prestamo");
+				}
+				rs.close();
+			}
+		}
+		catch (java.sql.SQLException ex)
+		{
+			throw new Exception("Error al obtener algún préstamo sin pagar del cliente"); 
+		}
+		
+		return nro_prestamo;
 	}
 
 
@@ -227,7 +296,5 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		DAOClienteMoroso dao = new DAOClienteMorosoImpl(this.conexion);
 		return dao.recuperarClientesMorosos();	
 	}
-	
 
-	
 }

@@ -136,3 +136,2673 @@ Se inicializa la ventana de login.
 se registra el controlador.
 se muestra la ventana.
 se carga el combo con los usuarios.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Empleado
+Intenta ingresar como Empleado con legajo , password 
+Recupera el usuario de BD para Empleado
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 5435, PIN [3, 4, 5, 3, 4]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Intenta ingresar como Empleado
+Intenta ingresar como Empleado con legajo , password 
+Recupera el usuario de BD para Empleado
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta , PIN []
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta == 1345678539887543 AND PIN == MD5(1)
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 1345678539887543 AND PIN == MD5(1)' at line 1
+SQLState: 42000
+VendorError: 1064
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta == 1345678539887543 AND PIN == MD5(1)
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 1345678539887543 AND PIN == MD5(1)' at line 1
+SQLState: 42000
+VendorError: 1064
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta == 1345678539887543 AND PIN == MD5(1);
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 1345678539887543 AND PIN == MD5(1)' at line 1
+SQLState: 42000
+VendorError: 1064
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta == 1345678539887543 AND PIN == 1
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 1345678539887543 AND PIN == 1' at line 1
+SQLState: 42000
+VendorError: 1064
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta == 1345678539887543 AND PIN == MD5(1);
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '== 1345678539887543 AND PIN == MD5(1)' at line 1
+SQLState: 42000
+VendorError: 1064
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Crea una ventana modal informando sobre el mensaje.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1 AND PIN = MD5(1);
+Hubo un error en la autenticación.
+Crea una ventana modal informando: El usuario o contraseña ingresados son incorrectos..
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN Caja_Ahorro WHERE nro_tarjeta = 1345678539887543
+SQLException: SELECT command denied to user 'atm'@'localhost' for table 'caja_ahorro'
+SQLState: 42000
+VendorError: 1142
+Muestra el saldo del cliente
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN Caja_Ahorro WHERE nro_tarjeta = 1345678539887543
+SQLException: SELECT command denied to user 'atm'@'localhost' for table 'caja_ahorro'
+SQLState: 42000
+VendorError: 1142
+Muestra el saldo del cliente
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN trans_cajas_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN trans_cajas_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de extracción
+Muestra el panel de extracción
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN trans_cajas_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Fri Oct 01 00:00:00 ART 2021 a null
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN trans_cajas_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Empleado
+Intenta ingresar como Empleado con legajo 1111, password 1
+Recupera el usuario de BD para Empleado
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 1111 con password 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT legajo, password FROM Empleado WHERE legajo = 1111 AND password = MD5(1)
+Empleado 1111 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 1111
+recupera el empleado que corresponde al legajo 1111.
+Se registra al empleado ApEmp9, NomEmp9 con legajo 9
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT tipo_doc FROM Empleado
+Carga el combo con los 8 tipos de documento recuperados
+muestra la ventana
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Empleado
+Intenta ingresar como Empleado con legajo 1111, password 1
+Recupera el usuario de BD para Empleado
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 1111 con password 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT legajo, password FROM Empleado WHERE legajo = 1111 AND password = MD5(1)
+Empleado 1111 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 1111
+recupera el empleado que corresponde al legajo 1111.
+Se registra al empleado González, José con legajo 1111
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT tipo_doc FROM Empleado
+Carga el combo con los 8 tipos de documento recuperados
+muestra la ventana
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de nuevo prestamo
+Ejecuta el listener de extracción
+Muestra el panel de gestión de cuotas
+Ejecuta el listener de transferencia
+Muestra el panel de lista de clientes morosos
+Modelo solicita al DAO que busque los clientes morosos
+Busca los clientes morosos.
+Recupera el prestamo nro 1.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 3.
+recupera el cliente por nro de cliente.
+Muestra una lista con 2 clientes morosos
+Cerrando la sesión.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Creando la ventana de login.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN trans_cajas_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Cerrando la sesión.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Creando la ventana de login.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Empleado
+Intenta ingresar como Empleado con legajo 1111, password 1
+Recupera el usuario de BD para Empleado
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 1111 con password 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT legajo, password FROM Empleado WHERE legajo = 1111 AND password = MD5(1)
+Empleado 1111 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 1111
+recupera el empleado que corresponde al legajo 1111.
+Se registra al empleado González, José con legajo 1111
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT tipo_doc FROM Empleado
+Carga el combo con los 8 tipos de documento recuperados
+muestra la ventana
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Fri Oct 11 00:00:00 ART 2019 a Sun Oct 31 10:26:33 ART 2021
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Fri Oct 11 00:00:00 ART 2019 a Sat Oct 23 00:00:00 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha > Fri Oct 11 00:00:00 ART 2019 AND fecha < Sat Oct 23 00:00:00 ART 2021 ORDER BY fecha,hora DESC
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Oct 11 00:00:00 ART 2019 AND fecha < Sat Oct 23 00:00:00 ART 2021 ORDER BY fecha' at line 1
+SQLState: 42000
+VendorError: 1064
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Error al crear la conexión con la base de datos.
+SQLException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+SQLState: 08S01
+VendorError: 0
+No se pudo conectar a la BD.
+Crea una ventana modal informando: Error en la conexión con la BD..
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN trans_cajas_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Tue Oct 26 22:06:37 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha > Wed Sep 01 00:00:00 ART 2021 AND fecha < Tue Oct 26 22:06:37 ART 2021 ORDER BY fecha,hora DESC
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Sep 01 00:00:00 ART 2021 AND fecha < Tue Oct 26 22:06:37 ART 2021 ORDER BY fecha' at line 1
+SQLState: 42000
+VendorError: 1064
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN trans_cajas_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 1345678539887543
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 01 22:18:57 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 2021-09-01 AND fecha <= 2021-10-01 ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 01 22:18:57 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 2021-09-01 AND fecha <= 2021-10-01 ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 01 22:18:57 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 2021-09-01 AND fecha <= 2021-10-01 ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo null a null
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Fri Oct 01 00:00:00 ART 2021 a Sat Oct 02 22:24:48 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '2021/09/01' AND fecha <= '2021/10/01' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 01 22:26:21 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 2021-09-01 AND fecha <= 2021-10-01 ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 01 22:27:27 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 01/09/2021 AND fecha <= 01/10/2021 ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 01 22:28:36 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '01/09/2021' AND fecha <= '01/10/2021' ORDER BY fecha,hora DESC
+SQLException: Incorrect DATE value: '01/09/2021'
+SQLState: HY000
+VendorError: 1525
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 01 22:31:46 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 21//2/01/0 AND fecha <= 21//2/01/1 ORDER BY fecha,hora DESC
+SQLException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '/2/01/0 AND fecha <= 21//2/01/1 ORDER BY fecha,hora DESC' at line 1
+SQLState: 42000
+VendorError: 1064
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Wed Oct 27 22:33:04 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 01/09/2021 AND fecha <= 27/10/2021 ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Wed Oct 27 22:33:04 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= 01/09/2021 AND fecha <= 27/10/2021 ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 100
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Oct 15 23:29:01 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '2021-09-01' AND fecha <= '2021-10-15' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 1345678539887543
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de transferencia
+Muestra el panel de transferencia
+Ejecuta el listener de extracción
+Muestra el panel de extracción
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 1345678539887543
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Fri Oct 01 00:00:00 ART 2021 a Wed Nov 10 11:35:13 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '2021-10-01' AND fecha <= '2021-11-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 0 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Sep 17 11:35:13 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '2021-09-01' AND fecha <= '2021-09-17' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Tue Sep 07 11:35:13 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '2021-09-01' AND fecha <= '2021-09-07' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 2 transacciones
+Ejecuta el listener de extracción
+Muestra el panel de extracción
+Ejecuta el listener de realizar una extracción
+Controlador solicita al modelo realizar la extracción
+Se solicita al modelo validar y parse del monto
+Intenta realizar el parsing del monto 30000
+Se solicita al usuario la confirmación la extracción
+Selecciono la opcion 0
+Realiza la extraccion de $30000.0 sobre la cuenta
+Se intenta realizar la siguiente consulta SELECT nro_ca FROM Tarjeta WHERE nro_tarjeta = 1345678539887543
+Se intenta realizar la siguiente consulta call extraer(11111111, 30000.0)
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de extracción
+Muestra el panel de extracción
+Ejecuta el listener de realizar una extracción
+Controlador solicita al modelo realizar la extracción
+Se solicita al modelo validar y parse del monto
+Intenta realizar el parsing del monto 6000000
+Se solicita al usuario la confirmación la extracción
+Selecciono la opcion 0
+Realiza la extraccion de $6000000.0 sobre la cuenta
+Se intenta realizar la siguiente consulta SELECT nro_ca FROM Tarjeta WHERE nro_tarjeta = 1345678539887543
+Se intenta realizar la siguiente consulta call extraer(11111111, 6000000.0)
+Se produjo una excepción al realizar la extracción
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 1345678539887543
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 4 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Wed Nov 10 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) AND fecha >= '2021-09-01' AND fecha <= '2021-11-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 4 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Wed Nov 10 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) AND fecha >= '2021-09-01' AND fecha <= '2021-11-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 4 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Fri Sep 10 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) AND fecha >= '2021-09-01' AND fecha <= '2021-09-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de extracción
+Muestra el panel de extracción
+Ejecuta el listener de realizar una extracción
+Controlador solicita al modelo realizar la extracción
+Se solicita al modelo validar y parse del monto
+Intenta realizar el parsing del monto 30000
+Se solicita al usuario la confirmación la extracción
+Selecciono la opcion 0
+Realiza la extraccion de $30000.0 sobre la cuenta
+Se intenta realizar la siguiente consulta SELECT nro_ca FROM Tarjeta WHERE nro_tarjeta = 1345678539887543
+Se intenta realizar la siguiente consulta call extraer(11111111, 30000.0, 1)
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de transferencia
+Muestra el panel de transferencia
+Ejecuta el listener de realizar una extracción
+Controlador solicita al modelo realizar la transferencia
+Se solicita al modelo validar y parse del monto
+Intenta realizar el parsing del monto 11
+Intenta realizar el parsing de un codigo de cuenta 22222222
+Se solicita al usuario la confirmación de la transferencia
+Selecciono la opcion 0
+Realiza la transferencia de $11.0 sobre a la cuenta 22222222
+Se intenta realizar la siguiente consulta SELECT nro_ca FROM Tarjeta WHERE nro_tarjeta = 1345678539887543
+Se intenta realizar la siguiente consulta call transferir(11111111, 22222222, 11.0, 1)
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 1345678539887543
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 6 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Thu Nov 25 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Thu Nov 25 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Wed Nov 10 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) AND fecha >= '2021-11-01' AND fecha <= '2021-11-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 2 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Wed Nov 10 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) AND fecha >= '2021-11-01' AND fecha <= '2021-11-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 2 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Thu Nov 11 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Sun Nov 21 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Thu Nov 25 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Mon Nov 01 00:00:00 ART 2021 a Wed Nov 10 12:58:07 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) AND fecha >= '2021-11-01' AND fecha <= '2021-11-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 2 transacciones
+Ejecuta el listener de transferencia
+Muestra el panel de transferencia
+Cerrando la sesión.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Creando la ventana de login.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Cerrando la sesión.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Creando la ventana de login.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 8643246800095321, PIN [3]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 8643246800095321 con pin 3
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 8643246800095321 AND PIN = MD5(3);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 8643246800095321
+Muestra el saldo del cliente
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 8643246800095321
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 8643246800095321 AND (trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca OR trans_cajas_ahorro.destino = Tarjeta.nro_ca) ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 4 transacciones
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Cliente
+Intenta ingresar como Cliente a un ATM, tarjeta 1345678539887543, PIN [1]
+Recupera el usuario de BD para Cliente
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario ATM
+usuario atm, password atm
+Se crea el modelo ATM.
+Recuperación de la información sobre el cajero
+Se intenta leer el archivo de propiedades cfg/config.properties
+Código cajero ATM: 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta autenticar la tarjeta 1345678539887543 con pin 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=atm, pass=atm
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT nro_tarjeta, PIN FROM Tarjeta WHERE nro_tarjeta = 1345678539887543 AND PIN = MD5(1);
+Usuario Cliente autenticado
+Se crea la ventana de ATM
+Ingresa a crear el panel para consulta de saldo
+Ingresa a crear el panel para Extracción
+Ingresa a crear el panel para Transferencias
+Ingresa a crear el panel para consulta de Ultimos Movimientos
+Ingresa a crear el panel para consulta de Movimientos Por Períodos
+Se registran los listeners.
+Se inicializa los listeners del menu de opciones
+Se inicializa los listeners de los botones de las operaciones
+Se crea el controlador ATM.
+Transfiere el control al nuevo controlador
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Ejecuta el listener de extracción
+Muestra el panel de extracción
+Ejecuta el listener de realizar una extracción
+Controlador solicita al modelo realizar la extracción
+Se solicita al modelo validar y parse del monto
+Intenta realizar el parsing del monto 30000
+Se solicita al usuario la confirmación la extracción
+Selecciono la opcion 0
+Realiza la extraccion de $30000.0 sobre la cuenta
+Se intenta realizar la siguiente consulta SELECT nro_ca FROM Tarjeta WHERE nro_tarjeta = 1345678539887543
+Se intenta realizar la siguiente consulta call extraer(11111111, 30000.0, 1)
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 1345678539887543
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 4 transacciones
+Ejecuta el listener de movimientos por periodo
+Muestra el panel de movimientos por período
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Tue Nov 02 16:14:29 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '2021-09-01' AND fecha <= '2021-11-02' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 3 transacciones
+Ejecuta el listener de buscar movimientos por periodo
+Periodo Wed Sep 01 00:00:00 ART 2021 a Wed Nov 10 16:14:29 ART 2021
+Consulta al modelo por ultimos movimientos
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '2021-09-01' AND fecha <= '2021-11-10' ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 4 transacciones
+Ejecuta el listener de transferencia
+Muestra el panel de transferencia
+Ejecuta el listener de realizar una extracción
+Controlador solicita al modelo realizar la transferencia
+Se solicita al modelo validar y parse del monto
+Intenta realizar el parsing del monto 10
+Intenta realizar el parsing de un codigo de cuenta 22222222
+Se solicita al usuario la confirmación de la transferencia
+Selecciono la opcion 0
+Realiza la transferencia de $10.0 sobre a la cuenta 22222222
+Se intenta realizar la siguiente consulta SELECT nro_ca FROM Tarjeta WHERE nro_tarjeta = 1345678539887543
+Se intenta realizar la siguiente consulta call transferir(11111111, 22222222, 10.0, 1)
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Ejecuta el listener de ultimos movimientos
+Muestra el panel de ultimos movimientos
+Consulta al modelo por ultimos movimientos
+Busca las ultimas 15 transacciones en la BD de la tarjeta 1345678539887543
+Se intenta realizar la siguiente consulta SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino FROM trans_cajas_ahorro, Tarjeta WHERE nro_tarjeta = 1345678539887543 AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca ORDER BY fecha,hora DESC
+Muestra la lista de movimientos
+Muestra una lista con 5 transacciones
+Ejecuta el listener de transferencia
+Muestra el panel de transferencia
+Ejecuta el listener de realizar una extracción
+Controlador solicita al modelo realizar la transferencia
+Se solicita al modelo validar y parse del monto
+Intenta realizar el parsing del monto 1
+Intenta realizar el parsing de un codigo de cuenta 2
+Se solicita al usuario la confirmación de la transferencia
+Selecciono la opcion 0
+Realiza la transferencia de $1.0 sobre a la cuenta 2
+Se intenta realizar la siguiente consulta SELECT nro_ca FROM Tarjeta WHERE nro_tarjeta = 1345678539887543
+Se intenta realizar la siguiente consulta call transferir(11111111, 2, 1.0, 1)
+Se produjo una excepción al realizar la extracción
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de consulta de saldo
+Consulta al modelo por el saldo del cliente
+Se intenta obtener el saldo de cliente 3
+Se intenta realizar la siguiente consulta SELECT saldo FROM Tarjeta NATURAL JOIN caja_ahorro WHERE nro_tarjeta = 1345678539887543
+Muestra el saldo del cliente
+Cerrando la sesión.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Creando la ventana de login.
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Empleado
+Intenta ingresar como Empleado con legajo 1111, password 1
+Recupera el usuario de BD para Empleado
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 1111 con password 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT legajo, password FROM Empleado WHERE legajo = 1111 AND password = MD5(1)
+Empleado 1111 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 1111
+recupera el empleado que corresponde al legajo 1111.
+Se registra al empleado González, José con legajo 1111
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT tipo_doc, COUNT(tipo_doc) FROM Empleado GROUP BY tipo_doc
+Carga el combo con los 1 tipos de documento recuperados
+muestra la ventana
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de nuevo prestamo
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 40421097 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 40421097.
+Verifica si el cliente 11111 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 11111 AND fecha_pago is NULL
+El cliente ya tiene un prestamo vigente. Prestamo 11111111
+Crea una ventana modal informando sobre el mensaje.
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 40421097 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 40421097.
+Verifica si el cliente 11111 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 11111 AND fecha_pago is NULL
+El cliente ya tiene un prestamo vigente. Prestamo 11111111
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de extracción
+Muestra el panel de gestión de cuotas
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 40421097 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 40421097.
+Verifica si el cliente 11111 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 11111 AND fecha_pago is NULL
+Busca el prestamo número 11111111
+Recupera el prestamo nro 11111111.
+Solicita la busqueda de pagos al modelo sobre el prestamo 11111111.
+Inicia la recuperacion de los pagos del prestamo 11111111
+Se recuperaron 5 pagos
+Muestra una lista con 5 pagos
+Cambia de estado para permitir pagar cuotas
+Solicita pagar cuotas.
+Busca en la tabla las cuotas seleccionadas a pagar
+Se recuperaron 2 cuotas a pagar de la tabla.
+Solicita pagar 2 cuotas del prestamo 11111111 del cliente DNI 40421097.
+recupera el cliente con documento de tipo DNI y nro 40421097.
+Verifica si el cliente 11111 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 11111 AND fecha_pago is NULL
+Inicia el pago de las 2 cuotas del prestamo 11111111
+Crea una ventana modal informando sobre el mensaje.
+Solicita la busqueda de pagos al modelo sobre el prestamo 11111111.
+Inicia la recuperacion de los pagos del prestamo 11111111
+Se recuperaron 5 pagos
+Muestra una lista con 5 pagos
+Solicita pagar cuotas.
+Busca en la tabla las cuotas seleccionadas a pagar
+Se recuperaron 3 cuotas a pagar de la tabla.
+Solicita pagar 3 cuotas del prestamo 11111111 del cliente DNI 40421097.
+recupera el cliente con documento de tipo DNI y nro 40421097.
+Verifica si el cliente 11111 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 11111 AND fecha_pago is NULL
+Inicia el pago de las 3 cuotas del prestamo 11111111
+Crea una ventana modal informando sobre el mensaje.
+Solicita la busqueda de pagos al modelo sobre el prestamo 11111111.
+Inicia la recuperacion de los pagos del prestamo 11111111
+Se recuperaron 5 pagos
+Muestra una lista con 5 pagos
+Solicita cambiar el monto.
+Solicita cambiar el cliente.
+Cambia de estado para permitir ingresar un cliente
+Ejecuta el listener de consulta de saldo
+Muestra el panel de nuevo prestamo
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 40421097 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 40421097.
+Verifica si el cliente 11111 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 11111 AND fecha_pago is NULL
+Cambia de estado para permitir ingresar un monto
+Ingresa un monto para obtener información de un potencial prestamo
+Solicita información sobre un monto.
+Se solicita parsing del monto
+recupera los períodos (cantidad de meses) según el monto 4000.0 para el prestamo.
+Se intenta realizar la siguiente consulta SELECT periodo FROM Tasa_Prestamo WHERE monto_sup >= 4000.0 AND monto_inf <= 4000.0
+Carga el combo con las cantidad de meses recuperadas. Total 1 items
+Ingresa el item: 5
+Cambia la opcion del mes a 5 con monto 4000.
+Solicita obtener información sobre el prestamo.
+Se solicita al modelo validar y parse del monto
+Se solicita al modelo validar y parse de la cantidad de meses
+Busca la tasa correspondiente a el monto 4000.0 con una cantidad de meses 5
+Se intenta realizar la siguiente consulta SELECT tasa FROM Tasa_Prestamo WHERE periodo = 5 AND monto_inf <= 4000.0 AND monto_sup >= 4000.0
+Cambia de estado para permitir crear el prestamo.
+Cambia de estado para permitir ingresar el período
+Solicita cambiar el monto.
+Solicita cambiar el monto.
+Cambia de estado para permitir ingresar un monto
+Ingresa un monto para obtener información de un potencial prestamo
+Solicita información sobre un monto.
+Se solicita parsing del monto
+recupera los períodos (cantidad de meses) según el monto 80000.0 para el prestamo.
+Se intenta realizar la siguiente consulta SELECT periodo FROM Tasa_Prestamo WHERE monto_sup >= 80000.0 AND monto_inf <= 80000.0
+Carga el combo con las cantidad de meses recuperadas. Total 2 items
+Ingresa el item: 12
+Cambia la opcion del mes a 12 con monto 80000.
+Solicita obtener información sobre el prestamo.
+Se solicita al modelo validar y parse del monto
+Se solicita al modelo validar y parse de la cantidad de meses
+Busca la tasa correspondiente a el monto 80000.0 con una cantidad de meses 12
+Se intenta realizar la siguiente consulta SELECT tasa FROM Tasa_Prestamo WHERE periodo = 12 AND monto_inf <= 80000.0 AND monto_sup >= 80000.0
+Cambia de estado para permitir crear el prestamo.
+Ingresa el item: 20
+Cambia de estado para permitir ingresar el período
+Cambia la opcion del mes a 20 con monto 80000.
+Solicita obtener información sobre el prestamo.
+Se solicita al modelo validar y parse del monto
+Se solicita al modelo validar y parse de la cantidad de meses
+Busca la tasa correspondiente a el monto 80000.0 con una cantidad de meses 20
+Se intenta realizar la siguiente consulta SELECT tasa FROM Tasa_Prestamo WHERE periodo = 20 AND monto_inf <= 80000.0 AND monto_sup >= 80000.0
+Cambia de estado para permitir crear el prestamo.
+Solicita la creación de un nuevo prestamo.
+Solicita realizar el prestamo para el cliente DNI:40421097 de un monto de 80000 en un periodo de 20 meses
+recupera el cliente con documento de tipo DNI y nro 40421097.
+Verifica que el cliente 11111 no tenga un prestamo vigente.
+Verifica si el cliente 11111 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 11111 AND fecha_pago is NULL
+Busca la tasa, interes y cuota para un prestamo de 80000.0 pesos a 20 meses
+Busca la tasa correspondiente a el monto 80000.0 con una cantidad de meses 20
+Se intenta realizar la siguiente consulta SELECT tasa FROM Tasa_Prestamo WHERE periodo = 20 AND monto_inf <= 80000.0 AND monto_sup >= 80000.0
+Crea un nuevo prestamo.
+Actualiza el prestamo con el legajo 1111
+Creación o actualizacion del prestamo.
+meses : 20
+monto : 80000.0
+tasa : 20.5
+interes : 27333.333333333332
+cuota : 5366.666666666666
+legajo : 1111
+cliente : 11111
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de transferencia
+Muestra el panel de lista de clientes morosos
+Modelo solicita al DAO que busque los clientes morosos
+Busca los clientes morosos.
+Recupera el prestamo nro 22222222.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 33333333.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 44444444.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 55555555.
+recupera el cliente por nro de cliente.
+Muestra una lista con 4 clientes morosos
+Ejecuta el listener de extracción
+Muestra el panel de gestión de cuotas
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
+Se incia la aplicación
+Creación de la ventana de login
+Se registran los listeners.
+Se inicia la carga de parametros para conectar con la BD.
+Recuperación de los datos para la conexión con la BD
+Se intenta leer el archivo de propiedades cfg/conexionBD.properties
+se cargó exitosamente
+Parámetros de conexión: jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires
+Se inicializa la ventana de login.
+se registra el controlador.
+se muestra la ventana.
+se carga el combo con los usuarios.
+Intenta ingresar como Empleado
+Intenta ingresar como Empleado con legajo 1111, password 1
+Recupera el usuario de BD para Empleado
+Ingresa a recuperar el usuarioBD y passwordBD para acceder a la BD del usuario Empleado
+usuario empleado, password empleado
+Se crea el modelo Empleado.
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta autenticar el legajo 1111 con password 1
+Parametros de conexion: url= jdbc:mysql://localhost:3306/banco?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Argentina/Buenos_Aires, user=empleado, pass=empleado
+Se establece la conexión con la BD
+Se intenta realizar la siguiente consulta SELECT legajo, password FROM Empleado WHERE legajo = 1111 AND password = MD5(1)
+Empleado 1111 autenticado
+Inicializacion de la ventana del Empleado
+Se registran los listeners.
+Se crea el controlador del Empleado.
+Transfiere el control al nuevo controlador
+Solicita al DAO un empleado con legajo 1111
+recupera el empleado que corresponde al legajo 1111.
+Se registra al empleado González, José con legajo 1111
+recupera los tipos de documentos.
+Se intenta realizar la siguiente consulta SELECT tipo_doc, COUNT(tipo_doc) FROM Empleado GROUP BY tipo_doc
+Carga el combo con los 1 tipos de documento recuperados
+muestra la ventana
+Informa a la vista que puede eliminar la ventana de login.
+Eliminación de la ventana de login.
+Ejecuta el listener de consulta de saldo
+Muestra el panel de nuevo prestamo
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 44587963 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 44587963.
+Verifica si el cliente 44444 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 44444 AND fecha_pago is NULL
+El cliente ya tiene un prestamo vigente. Prestamo 44444444
+Crea una ventana modal informando sobre el mensaje.
+Ejecuta el listener de transferencia
+Muestra el panel de lista de clientes morosos
+Modelo solicita al DAO que busque los clientes morosos
+Busca los clientes morosos.
+Recupera el prestamo nro 11111111.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 22222222.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 33333333.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 44444444.
+recupera el cliente por nro de cliente.
+Recupera el prestamo nro 55555555.
+recupera el cliente por nro de cliente.
+Muestra una lista con 5 clientes morosos
+Ejecuta el listener de extracción
+Muestra el panel de gestión de cuotas
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 27897765 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 27897765.
+Verifica si el cliente 77777 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 77777 AND fecha_pago is NULL
+El cliente no tiene un prestamo vigente.
+Crea una ventana modal informando sobre el mensaje.
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 14587963 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 14587963.
+Verifica si el cliente 88888 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 88888 AND fecha_pago is NULL
+Busca el prestamo número 55555555
+Recupera el prestamo nro 55555555.
+Solicita la busqueda de pagos al modelo sobre el prestamo 55555555.
+Inicia la recuperacion de los pagos del prestamo 55555555
+Se recuperaron 10 pagos
+Muestra una lista con 10 pagos
+Cambia de estado para permitir pagar cuotas
+Solicita pagar cuotas.
+Busca en la tabla las cuotas seleccionadas a pagar
+Se recuperaron 5 cuotas a pagar de la tabla.
+Solicita pagar 5 cuotas del prestamo 55555555 del cliente DNI 14587963.
+recupera el cliente con documento de tipo DNI y nro 14587963.
+Verifica si el cliente 88888 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 88888 AND fecha_pago is NULL
+Inicia el pago de las 5 cuotas del prestamo 55555555
+Crea una ventana modal informando sobre el mensaje.
+Solicita la busqueda de pagos al modelo sobre el prestamo 55555555.
+Inicia la recuperacion de los pagos del prestamo 55555555
+Se recuperaron 10 pagos
+Muestra una lista con 10 pagos
+Ejecuta el listener de consulta de saldo
+Muestra el panel de nuevo prestamo
+Selecciona el cliente
+Solicita seleccionar un cliente con documento DNI 14587963 para realizar el préstamo.
+recupera el cliente con documento de tipo DNI y nro 14587963.
+Verifica si el cliente 88888 tiene algun prestamo que tienen cuotas por pagar.
+Se intenta realizar la siguiente consulta SELECT nro_prestamo FROM Prestamo NATURAL JOIN Pago WHERE nro_cliente = 88888 AND fecha_pago is NULL
+El cliente ya tiene un prestamo vigente. Prestamo 55555555
+Crea una ventana modal informando sobre el mensaje.
+Saliendo de la aplicación.
+Se desconecta la conexión a la BD.
+Se intenta cerrar la conexión activa
+Eliminación de la ventana.
