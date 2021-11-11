@@ -447,6 +447,10 @@ BEGIN
     COMMIT;
 END; !
 
+#-------------------------------------------------------------------------
+
+#Creación de trigger.
+
 CREATE TRIGGER crear_pagos
 AFTER INSERT ON Prestamo
 FOR EACH ROW
@@ -467,12 +471,12 @@ delimiter ;
 
 #Usuario admin.
 
-    #CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+    CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
     GRANT ALL PRIVILEGES ON banco.* TO 'admin'@'localhost' WITH GRANT OPTION;
 
 #Usuario empleado.
 
-    #CREATE USER 'empleado'@'%' IDENTIFIED BY 'empleado';
+    CREATE USER 'empleado'@'%' IDENTIFIED BY 'empleado';
     GRANT SELECT ON banco.Empleado TO 'empleado'@'%';
     GRANT SELECT ON banco.Sucursal TO 'empleado'@'%';
     GRANT SELECT ON banco.Tasa_Plazo_Fijo TO 'empleado'@'%';
@@ -490,7 +494,7 @@ delimiter ;
 
 #Usuario atm.
 
-    #CREATE USER 'atm'@'%' IDENTIFIED BY 'atm';
+    CREATE USER 'atm'@'%' IDENTIFIED BY 'atm';
     GRANT SELECT ON banco.trans_cajas_ahorro TO 'atm'@'%';
     GRANT SELECT ON banco.Caja_Ahorro TO 'atm'@'%'; #Para el metodo obtenerSaldo de ModeloATMImpl 
     GRANT SELECT, UPDATE ON banco.Tarjeta TO 'atm'@'%';

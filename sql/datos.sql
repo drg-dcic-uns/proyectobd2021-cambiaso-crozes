@@ -162,20 +162,3 @@ INSERT INTO EXTRACCION(nro_trans,nro_cliente,nro_ca) VALUES(13,44444,44444444);
 INSERT INTO TRANSFERENCIA(nro_trans,nro_cliente,origen,destino) VALUES(14,44444,44444444,66666666);
 INSERT INTO TRANSFERENCIA(nro_trans,nro_cliente,origen,destino) VALUES(15,55555,55555555,11111111);
 INSERT INTO TRANSFERENCIA(nro_trans,nro_cliente,origen,destino) VALUES(16,66666,66666666,22222222);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
