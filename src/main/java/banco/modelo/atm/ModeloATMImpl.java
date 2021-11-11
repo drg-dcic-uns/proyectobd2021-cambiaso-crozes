@@ -1,5 +1,6 @@
 package banco.modelo.atm;
 
+import java.io.EOFException;
 import java.io.FileInputStream;
 import java.sql.CallableStatement;
 import java.sql.PreparedStatement;
@@ -50,46 +51,75 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 	}
 
 	@Override
-	public boolean autenticarUsuarioAplicacion(String tarjeta, String pin)	{
-		
-		logger.info("Se intenta autenticar la tarjeta {} con pin {}", tarjeta, pin);
-
+	public boolean autenticarUsuarioAplicacion(String tarjeta, String pin) throws Exception	{
 		/** 
 		 * TODO Código que autentica que exista una tarjeta con ese pin (el pin guardado en la BD está en MD5)
 		 *      En caso exitoso deberá registrar la tarjeta en la propiedad tarjeta y retornar true.
 		 *      Si la autenticación no es exitosa porque no coincide el pin o la tarjeta no existe deberá retornar falso
 		 *      y si hubo algún otro error deberá producir una excepción.
 		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */
-		this.tarjeta = tarjeta;
-        return true;
-		// Fin datos estáticos de prueba.
+		logger.info("Se intenta autenticar la tarjeta {} con pin {}", tarjeta, pin);
+		boolean conexion = this.conectar("atm", "atm");
+		boolean resultado = false;
+		if(conexion){
+			try{
+				long t = Long.parseLong(tarjeta);
+				String sql = "SELECT nro_tarjeta, PIN " +
+							"FROM Tarjeta " +
+							"WHERE nro_tarjeta = " + t + " AND PIN = MD5(" + pin + ");";
+				ResultSet rs = this.consulta(sql);
+				if (rs != null && rs.next()){
+					this.tarjeta = rs.getString("nro_tarjeta");
+					resultado = true;
+					rs.close();
+				}
+			}catch (SQLException ex) {
+				System.out.println("Mensaje: " + ex.getMessage());
+				System.out.println("Código: " + ex.getErrorCode());
+				System.out.println("SQLState: " + ex.getSQLState());
+			}
+		}else{
+			throw new Exception("Se produjo un error al intentar conectarse con la base de datos");
+		}
+		return resultado;
 	}
 	
 	
 	@Override
 	public Double obtenerSaldo() throws Exception
 	{
+		/** 
+		 * TODO Obtiene el saldo.
+		 *      Debe capturar la excepción SQLException y propagar una Exception más amigable.
+		 */
+
 		logger.info("Se intenta obtener el saldo de cliente {}", 3);
 
 		if (this.tarjeta == null ) {
 			throw new Exception("El cliente no ingresó la tarjeta");
 		}
 
-		/** 
-		 * TODO Obtiene el saldo.
-		 *      Debe capturar la excepción SQLException y propagar una Exception más amigable.
-		 */
-
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.
-		 */
-		Double saldo = (double) 1001;		
+		Double saldo = 1.0;
+		try{
+			long t = Long.parseLong(this.tarjeta);
+			String sql = "SELECT saldo " +
+						 "FROM Tarjeta NATURAL JOIN caja_ahorro " +
+						 "WHERE nro_tarjeta = " + t;
+			ResultSet rs = this.consulta(sql);
+			if(rs != null){
+				if (rs.next()){
+					saldo = rs.getDouble("saldo");
+				}
+				rs.close();
+			}
+		}catch (java.sql.SQLException ex) {
+			System.out.println("Mensaje: " + ex.getMessage());
+			System.out.println("Código: " + ex.getErrorCode());
+			System.out.println("SQLState: " + ex.getSQLState());
+			throw new Exception("Se produjo un error al consultar el saldo de la tarjeta");
+		}
+		
 		return saldo;
-		// Fin datos estáticos de prueba.
 	}	
 
 	@Override
@@ -100,143 +130,92 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 	@Override
 	public ArrayList<TransaccionCajaAhorroBean> cargarUltimosMovimientos(int cantidad) throws Exception
 	{
-		logger.info("Busca las ultimas {} transacciones en la BD de la tarjeta {}",cantidad, Integer.valueOf(this.tarjeta.trim()));
+		logger.info("Busca las ultimas {} transacciones en la BD de la tarjeta {}",cantidad, tarjeta);
 
-		/**
-		 * TODO Deberá recuperar los ultimos movimientos del cliente, la cantidad está definida en el parámetro.
-		 * 		Debe capturar la excepción SQLException y propagar una Exception más amigable. 
-		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.
-		 * 
-		+------------+----------+---------------+---------+----------+---------+
-		| fecha      | hora     | tipo          | monto   | cod_caja | destino |
-		+------------+----------+---------------+---------+----------+---------+
-		| 2021-09-16 | 11:10:00 | transferencia | -700.00 |       18 |      32 |
-		| 2021-09-15 | 17:20:00 | extraccion    | -200.00 |        2 |    NULL |
-		| 2021-09-14 | 09:03:00 | deposito      | 1600.00 |        2 |    NULL |
-		| 2021-09-13 | 13:30:00 | debito        |  -50.00 |     NULL |    NULL |
-		| 2021-09-12 | 15:00:00 | transferencia | -400.00 |       41 |       7 |
-		+------------+----------+---------------+---------+----------+---------+
- 		 */
-		
-		ArrayList<TransaccionCajaAhorroBean> lista = new ArrayList<TransaccionCajaAhorroBean>();
-		TransaccionCajaAhorroBean fila1 = new TransaccionCajaAhorroBeanImpl();
-		fila1.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-16","11:10:00"));
-		fila1.setTransaccionTipo("transferencia");
-		fila1.setTransaccionMonto(-700.00);
-		fila1.setTransaccionCodigoCaja(18);
-		fila1.setCajaAhorroDestinoNumero(32);
-		lista.add(fila1);
+		ArrayList<TransaccionCajaAhorroBean> lista_movimientos = new ArrayList<TransaccionCajaAhorroBean>();
 
-		TransaccionCajaAhorroBean fila2 = new TransaccionCajaAhorroBeanImpl();
-		fila2.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-15","17:20:00"));
-		fila2.setTransaccionTipo("extraccion");
-		fila2.setTransaccionMonto(-200.00);
-		fila2.setTransaccionCodigoCaja(2);
-		fila2.setCajaAhorroDestinoNumero(0);	
-		lista.add(fila2);
-		
-		TransaccionCajaAhorroBean fila3 = new TransaccionCajaAhorroBeanImpl();
-		fila3.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-14","09:03:00"));
-		fila3.setTransaccionTipo("deposito");
-		fila3.setTransaccionMonto(1600.00);
-		fila3.setTransaccionCodigoCaja(2);
-		fila3.setCajaAhorroDestinoNumero(0);	
-		lista.add(fila3);		
+		try{
+			long t = Long.parseLong(this.tarjeta);
+			String sql = "SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino " +
+						 "FROM trans_cajas_ahorro, Tarjeta " +
+						 "WHERE nro_tarjeta = " + t + " AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca " +
+						 "ORDER BY fecha DESC,hora DESC";
+			ResultSet rs = this.consulta(sql);
+			TransaccionCajaAhorroBean fila;
+			if(rs != null){
+				for(int i = 0;(i < cantidad) && rs.next();i++){
+					fila = new TransaccionCajaAhorroBeanImpl();
 
-		TransaccionCajaAhorroBean fila4 = new TransaccionCajaAhorroBeanImpl();
-		fila4.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-13","13:30:00"));
-		fila4.setTransaccionTipo("debito");
-		fila4.setTransaccionMonto(-50.00);
-		fila4.setTransaccionCodigoCaja(0);
-		fila4.setCajaAhorroDestinoNumero(0);	
-		lista.add(fila4);	
-		
-		TransaccionCajaAhorroBean fila5 = new TransaccionCajaAhorroBeanImpl();
-		fila5.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-12","15:00:00"));
-		fila5.setTransaccionTipo("transferencia");
-		fila5.setTransaccionMonto(-400.00);
-		fila5.setTransaccionCodigoCaja(41);
-		fila5.setCajaAhorroDestinoNumero(7);	
-		lista.add(fila5);
-		
-		return lista;
-		
-		// Fin datos estáticos de prueba.
+					fila.setTransaccionFechaHora(Fechas.convertirStringADate(rs.getString("fecha"),rs.getString("hora")));
+					
+					fila.setTransaccionTipo(rs.getString("tipo"));
+					
+					fila.setTransaccionMonto(rs.getDouble("monto"));
+					
+					fila.setTransaccionCodigoCaja(rs.getInt("cod_caja"));
+					
+					fila.setCajaAhorroDestinoNumero(rs.getInt("destino"));
+					
+					lista_movimientos.add(fila);
+				} 
+			
+				rs.close();
+			}
+		}catch (SQLException ex) {
+			System.out.println("Mensaje: " + ex.getMessage());
+			System.out.println("Código: " + ex.getErrorCode());
+			System.out.println("SQLState: " + ex.getSQLState());
+			throw new Exception("Se produjo un error al recuperar los últimos movimientos");
+		}
+
+		return lista_movimientos;
 	}	
 	
 	@Override
 	public ArrayList<TransaccionCajaAhorroBean> cargarMovimientosPorPeriodo(Date desde, Date hasta)
 			throws Exception {
 
-		/**
-		 * TODO Deberá recuperar los ultimos del cliente que se han realizado entre las fechas indicadas.
-		 * 		Debe capturar la excepción SQLException y propagar una Exception más amigable. 
-		 * 		Debe generar excepción sin las fechas son erroneas (ver descripción en interface)
-		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.
-		 * 
-		+------------+----------+---------------+---------+----------+---------+
-		| fecha      | hora     | tipo          | monto   | cod_caja | destino |
-		+------------+----------+---------------+---------+----------+---------+
-		| 2021-09-16 | 11:10:00 | transferencia | -700.00 |       18 |      32 |
-		| 2021-09-15 | 17:20:00 | extraccion    | -200.00 |        2 |    NULL |
-		| 2021-09-14 | 09:03:00 | deposito      | 1600.00 |        2 |    NULL |
-		| 2021-09-13 | 13:30:00 | debito        |  -50.00 |     NULL |    NULL |
-		| 2021-09-12 | 15:00:00 | transferencia | -400.00 |       41 |       7 |
-		+------------+----------+---------------+---------+----------+---------+
- 		 */
-		
-		ArrayList<TransaccionCajaAhorroBean> lista = new ArrayList<TransaccionCajaAhorroBean>();
-		TransaccionCajaAhorroBean fila1 = new TransaccionCajaAhorroBeanImpl();
-		fila1.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-16","11:10:00"));
-		fila1.setTransaccionTipo("transferencia");
-		fila1.setTransaccionMonto(-700.00);
-		fila1.setTransaccionCodigoCaja(18);
-		fila1.setCajaAhorroDestinoNumero(32);
-		lista.add(fila1);
+		if(desde == null || hasta == null || desde.after(hasta) || hasta.after(java.util.Calendar.getInstance().getTime())){
+			throw new Exception("Las fechas ingresadas no son válidas");
+		}
 
-		TransaccionCajaAhorroBean fila2 = new TransaccionCajaAhorroBeanImpl();
-		fila2.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-15","17:20:00"));
-		fila2.setTransaccionTipo("extraccion");
-		fila2.setTransaccionMonto(-200.00);
-		fila2.setTransaccionCodigoCaja(2);
-		fila2.setCajaAhorroDestinoNumero(0);	
-		lista.add(fila2);
-		
-		TransaccionCajaAhorroBean fila3 = new TransaccionCajaAhorroBeanImpl();
-		fila3.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-14","09:03:00"));
-		fila3.setTransaccionTipo("deposito");
-		fila3.setTransaccionMonto(1600.00);
-		fila3.setTransaccionCodigoCaja(2);
-		fila3.setCajaAhorroDestinoNumero(0);	
-		lista.add(fila3);		
+		ArrayList<TransaccionCajaAhorroBean> lista_movimientos = new ArrayList<TransaccionCajaAhorroBean>();
 
-		TransaccionCajaAhorroBean fila4 = new TransaccionCajaAhorroBeanImpl();
-		fila4.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-13","13:30:00"));
-		fila4.setTransaccionTipo("debito");
-		fila4.setTransaccionMonto(-50.00);
-		fila4.setTransaccionCodigoCaja(0);
-		fila4.setCajaAhorroDestinoNumero(0);	
-		lista.add(fila4);	
+		try{
+			long t = Long.parseLong(this.tarjeta);
+			String sql = "SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino " +
+						 "FROM trans_cajas_ahorro, Tarjeta " +
+						 "WHERE nro_tarjeta = " + t + " AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '" + Fechas.convertirDateADateSQL(desde) + "' AND fecha <= '" + Fechas.convertirDateADateSQL(hasta) + "' " +
+						 "ORDER BY fecha DESC,hora DESC";
+			ResultSet rs = this.consulta(sql);
+			TransaccionCajaAhorroBean fila;
+			if(rs != null){
+				while(rs.next()){
+					fila = new TransaccionCajaAhorroBeanImpl();
+
+					fila.setTransaccionFechaHora(Fechas.convertirStringADate(rs.getString("fecha"),rs.getString("hora")));
+					
+					fila.setTransaccionTipo(rs.getString("tipo"));
+					
+					fila.setTransaccionMonto(rs.getDouble("monto"));
+					
+					fila.setTransaccionCodigoCaja(rs.getInt("cod_caja"));
+					
+					fila.setCajaAhorroDestinoNumero(rs.getInt("destino"));
+					
+					lista_movimientos.add(fila);
+				} 
 		
-		TransaccionCajaAhorroBean fila5 = new TransaccionCajaAhorroBeanImpl();
-		fila5.setTransaccionFechaHora(Fechas.convertirStringADate("2021-09-12","15:00:00"));
-		fila5.setTransaccionTipo("transferencia");
-		fila5.setTransaccionMonto(-400.00);
-		fila5.setTransaccionCodigoCaja(41);
-		fila5.setCajaAhorroDestinoNumero(7);	
-		lista.add(fila5);
-		
-		logger.debug("Retorna una lista con {} elementos", lista.size());
-		
-		return lista;
-		
-		// Fin datos estáticos de prueba.
+				rs.close();
+			}
+		}catch (SQLException ex) {
+			System.out.println("Mensaje: " + ex.getMessage());
+			System.out.println("Código: " + ex.getErrorCode());
+			System.out.println("SQLState: " + ex.getSQLState());
+			throw new Exception("Se produjo un error al recuperar los movimientos por período");
+		}
+
+		return lista_movimientos;
 	}
 	
 	@Override
@@ -248,14 +227,44 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 		 * 		Debe capturar la excepción SQLException y propagar una Exception más amigable. 
 		 * 		Debe generar excepción si las propiedades codigoATM o tarjeta no tienen valores
 		 */		
-		
+	
+		if(this.codigoATM == null || this.tarjeta == null){
+			throw new Exception("codigoATM o tarjeta no tienen valores");
+		}
+
 		String resultado = ModeloATM.EXTRACCION_EXITOSA;
+		int caja = 0;
+
+		try{
+			long t = Long.parseLong(this.tarjeta);
+			String sql1 = "SELECT nro_ca " +
+						  "FROM Tarjeta " +
+						  "WHERE nro_tarjeta = " + t;
+			ResultSet rs1 = this.consulta(sql1);
+			if(rs1 != null){
+				if(rs1.next()){
+					caja = rs1.getInt("nro_ca");
+				}
+				rs1.close();
+			}
+
+			String sql2 = "call extraer(" + caja + ", " + monto + ", "+ codigoATM +")";
+			ResultSet rs2 = this.consulta(sql2);
+			if(rs2 != null){
+				if(rs2.next()){
+					resultado = rs2.getString("resultado");
+				}
+				rs2.close();
+			}
+		}catch(SQLException ex){
+			throw new Exception("Se produjo un error al realizar la extraccion");
+		}
 		
 		if (!resultado.equals(ModeloATM.EXTRACCION_EXITOSA)) {
 			throw new Exception(resultado);
 		}
-		return this.obtenerSaldo();
 
+		return this.obtenerSaldo();
 	}
 
 	
@@ -269,10 +278,19 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 		 * 		Debe capturar la excepción SQLException y propagar una Exception más amigable. 
 		 * 		Debe generar excepción si la cuenta es vacia, entero negativo o no puede generar el parsing.
 		 * retorna la cuenta en formato int
-		 */	
+		 */
 		
-		logger.info("Encontró la cuenta en la BD.");
-        return 1;
+		if(p_cuenta == null){
+			throw new Exception("La cuenta ingresada es nula");
+		}
+
+		int cuenta = Integer.parseInt(p_cuenta);
+
+		if(cuenta <= 0){
+			throw new Exception("La cuenta es un número menor o igual a cero");
+		}
+
+		return cuenta;
 	}	
 	
 	@Override
@@ -284,13 +302,42 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 		 * 		Debe capturar la excepción SQLException y propagar una Exception más amigable. 
 		 * 		Debe generar excepción si las propiedades codigoATM o tarjeta no tienen valores
 		 */		
-		
+		if(this.codigoATM == null || this.tarjeta == null){
+			throw new Exception("codigoATM o tarjeta no tienen valores");
+		}
 
 		String resultado = ModeloATM.TRANSFERENCIA_EXITOSA;
+		int cajaOrigen = 0;
+
+		try{
+			long t = Long.parseLong(this.tarjeta);
+			String sql1 = "SELECT nro_ca " +
+						  "FROM Tarjeta " +
+						  "WHERE nro_tarjeta = " + t;
+			ResultSet rs1 = this.consulta(sql1);
+			if(rs1 != null){
+				if(rs1.next()){
+					cajaOrigen = rs1.getInt("nro_ca");
+				}
+				rs1.close();
+			}
+
+			String sql2 = "call transferir(" + cajaOrigen + ", " + cajaDestino + ", " + monto + ", "+ codigoATM + ")";
+			ResultSet rs2 = this.consulta(sql2);
+			if(rs2 != null){
+				if(rs2.next()){
+					resultado = rs2.getString("resultado");
+				}
+				rs2.close();
+			}
+		}catch(SQLException ex){
+			throw new Exception("Se produjo un error al realizar la transferencia");
+		}
 		
 		if (!resultado.equals(ModeloATM.TRANSFERENCIA_EXITOSA)) {
 			throw new Exception(resultado);
 		}
+
 		return this.obtenerSaldo();
 	}
 

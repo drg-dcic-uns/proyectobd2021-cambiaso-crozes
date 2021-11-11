@@ -32,71 +32,65 @@ public class DAOPagoImpl implements DAOPago {
 		 * 	    Si ocurre algún error deberá propagar una excepción.
 		 */
 		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  : 
-		 * Retorna los pagos de un prestamo nro 4
-		 */
-		ArrayList<PagoBean> lista = new ArrayList<PagoBean>();
 		
-		PagoBean fila = new PagoBeanImpl();
-		fila.setNroPrestamo(4);
-		fila.setNroPago(1);
-		fila.setFechaVencimiento(Fechas.convertirStringADate("2021-05-05"));
-		fila.setFechaPago(Fechas.convertirStringADate("2021-05-10"));
-		lista.add(fila);
-		
-		fila = new PagoBeanImpl();
-		fila.setNroPrestamo(4);
-		fila.setNroPago(2);
-		fila.setFechaVencimiento(Fechas.convertirStringADate("2021-06-05"));
-		fila.setFechaPago(Fechas.convertirStringADate("2021-06-11"));
-		lista.add(fila);
-		
-		fila = new PagoBeanImpl();
-		fila.setNroPrestamo(4);
-		fila.setNroPago(3);
-		fila.setFechaVencimiento(Fechas.convertirStringADate("2021-07-05"));
-		fila.setFechaPago(Fechas.convertirStringADate("2021-07-15"));
-		lista.add(fila);
-		
-		fila = new PagoBeanImpl();
-		fila.setNroPrestamo(4);
-		fila.setNroPago(4);
-		fila.setFechaVencimiento(Fechas.convertirStringADate("2021-08-05"));
-		fila.setFechaPago(null);
-		lista.add(fila);
+		ArrayList<PagoBean> lista_pagos = new ArrayList<PagoBean>();
+		PagoBean fila;
 
-		fila = new PagoBeanImpl();
-		fila.setNroPrestamo(4);
-		fila.setNroPago(5);
-		fila.setFechaVencimiento(Fechas.convertirStringADate("2021-09-05"));
-		fila.setFechaPago(null);
-		lista.add(fila);
+		try {
+            String sql = "SELECT nro_prestamo, nro_pago, fecha_venc, fecha_pago " + 
+                         "FROM Pago " +
+                         "WHERE nro_prestamo = " + nroPrestamo;
+            PreparedStatement stmt = conexion.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery(sql);
+            if(rs != null) {
+                while(rs.next()) {
+                    fila = new PagoBeanImpl();
+                    fila.setNroPrestamo(rs.getInt("nro_prestamo"));
+                    fila.setNroPago(rs.getInt("nro_pago"));
+                    fila.setFechaVencimiento(Fechas.convertirStringADate(rs.getString("fecha_venc")));
+					fila.setFechaPago(Fechas.convertirStringADate(rs.getString("fecha_pago")));
+					lista_pagos.add(fila);
+                }
+                rs.close();
+            }
+            stmt.close();
+        }
+        catch (SQLException ex)
+        {
+            throw new SQLException("Error al recuperar pagos"); 
+        }
 
-		fila = new PagoBeanImpl();
-		fila.setNroPrestamo(4);
-		fila.setNroPago(6);
-		fila.setFechaVencimiento(Fechas.convertirStringADate("2021-10-05"));
-		fila.setFechaPago(null);
-		lista.add(fila);
-		
-		return lista;
-		// Fin datos estáticos de prueba.
+		return lista_pagos;
 	}
 
 	@Override
-	public void registrarPagos(int nroCliente, int nroPrestamo, List<Integer> cuotasAPagar)  throws Exception {
+    public void registrarPagos(int nroCliente, int nroPrestamo, List<Integer> cuotasAPagar)  throws Exception {
 
-		logger.info("Inicia el pago de las {} cuotas del prestamo {}", cuotasAPagar.size(), nroPrestamo);
+        logger.info("Inicia el pago de las {} cuotas del prestamo {}", cuotasAPagar.size(), nroPrestamo);
 
-		/**
-		 * TODO Registra los pagos de cuotas definidos en cuotasAPagar.
-		 * 
-		 * nroCliente asume que esta validado
-		 * nroPrestamo asume que está validado
-		 * cuotasAPagar Debe verificar que las cuotas a pagar no estén pagas (fecha_pago = NULL)
-		 * @throws Exception Si hubo error en la conexión
-		 */		
+        /**
+         * TODO Registra los pagos de cuotas definidos en cuotasAPagar.
+         * 
+         * nroCliente asume que esta validado
+         * nroPrestamo asume que está validado
+         * cuotasAPagar Debe verificar que las cuotas a pagar no estén pagas (fecha_pago = NULL)
+         * @throws Exception Si hubo error en la conexión
+         */
 
-	}
+        try {
+            for(int i = 0; i < cuotasAPagar.size(); i++) {
+                String sql = "UPDATE Pago " +
+                             "SET fecha_pago = CURDATE() " +
+                             "WHERE nro_prestamo = " + nroPrestamo + " AND nro_pago = " + cuotasAPagar.get(i) + " AND fecha_pago is NULL";
+                PreparedStatement stmt = conexion.prepareStatement(sql);
+                stmt.executeUpdate(sql);
+                stmt.close();
+            }
+        }
+        catch (SQLException ex)
+        {
+            throw new SQLException("Error al registrar pagos"); 
+        }
+
+    }
 }

@@ -51,7 +51,7 @@ INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,va
 INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(22222222,"2021/04/25",03,5000,10.65,300,200,2222,22222);
 INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(33333333,"2021/04/01",09,4521.03,10.65,800,300,3333,33333);
 INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(44444444,"2020/08/06",12,9089,10.65,1250,500,4444,44444);
-INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(55555555,"2020/08/06",12,9089,10.65,1250,400,4444,88888);
+INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(55555555,"2020/08/06",10,9089,10.65,1250,400,4444,88888);
 
 INSERT INTO TASA_PRESTAMO(periodo,monto_inf,monto_sup,tasa) VALUES(12,50000,100000,24.25);
 INSERT INTO TASA_PRESTAMO(periodo,monto_inf,monto_sup,tasa) VALUES(5,4000,10000,25);

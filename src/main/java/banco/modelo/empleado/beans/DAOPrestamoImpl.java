@@ -21,7 +21,6 @@ public class DAOPrestamoImpl implements DAOPrestamo {
 		this.conexion = c;
 	}
 	
-	
 	@Override
 	public void crearActualizarPrestamo(PrestamoBean prestamo) throws Exception {
 
@@ -44,6 +43,45 @@ public class DAOPrestamoImpl implements DAOPrestamo {
 		 *				logger.error("VendorError: " + ex.getErrorCode());
 		 *		   pero luego deberá propagarla para que se encargue el controlador. 
 		 */
+		
+		try {
+			if(prestamo.getNroPrestamo() != null) {
+				String sql = "SELECT nro_prestamo, fecha, cant_meses, monto, tasa_interes, interes, valor_cuota, legajo, nro_cliente " + 
+							"FROM Prestamo " +
+							"WHERE nro_prestamo = " + prestamo.getNroPrestamo();
+				PreparedStatement stmt = conexion.prepareStatement(sql);
+				ResultSet rs = stmt.executeQuery(sql);
+				if(rs != null && rs.next()) {
+					//Como sabemos que el nro_prestamo es igual entonces no hace falta actualizarlo
+					rs.updateDate("fecha", Fechas.convertirDateADateSQL(prestamo.getFecha()));
+					rs.updateInt("cant_meses", prestamo.getCantidadMeses());
+					rs.updateDouble("monto", prestamo.getMonto());
+					rs.updateDouble("tasa_interes", prestamo.getTasaInteres());
+					rs.updateDouble("interes", prestamo.getInteres());
+					rs.updateDouble("valor_cuota", prestamo.getValorCuota());
+					rs.updateInt("legajo", prestamo.getLegajo());
+					rs.updateInt("nro_cliente", prestamo.getNroCliente());
+					rs.close();
+					stmt.close();
+				}
+			}
+			else {
+				//nro_prestamo no lo pongo porque es auto_increment 
+				Statement stmt = conexion.createStatement();
+				String sql = "INSERT INTO PRESTAMO(fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) " +
+							 "VALUES(CURDATE()," + prestamo.getCantidadMeses() + "," + prestamo.getMonto() + "," + 
+							  prestamo.getTasaInteres() + "," + prestamo.getInteres() + "," + prestamo.getValorCuota() + "," +
+							  prestamo.getLegajo() + "," + prestamo.getNroCliente() + ")";
+				stmt.execute(sql);
+				stmt.close();
+			}
+		}
+		catch (java.sql.SQLException ex) {
+			logger.error("SQLException: " + ex.getMessage());
+		 	logger.error("SQLState: " + ex.getSQLState());
+		 	logger.error("VendorError: " + ex.getErrorCode());
+			throw new SQLException("Error al crear o actualizar préstamo"); 
+		}
 
 	}
 
@@ -59,26 +97,34 @@ public class DAOPrestamoImpl implements DAOPrestamo {
 		 * @return Un prestamo que corresponde a ese id o null
 		 * @throws Exception si hubo algun problema de conexión
 		 */		
-
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 * Retorna un PretamoBean con información del prestamo nro 4
-		 */
 		PrestamoBean prestamo = null;
-			
-		prestamo = new PrestamoBeanImpl();
-		prestamo.setNroPrestamo(4);
-		prestamo.setFecha(Fechas.convertirStringADate("2021-04-05"));
-		prestamo.setCantidadMeses(6);
-		prestamo.setMonto(20000);
-		prestamo.setTasaInteres(24);
-		prestamo.setInteres(2400);
-		prestamo.setValorCuota(3733.33);
-		prestamo.setLegajo(2);
-		prestamo.setNroCliente(2);
-   	
+		
+		try {
+			String sql = "SELECT nro_prestamo, fecha, cant_meses, monto, tasa_interes, interes, valor_cuota, legajo, nro_cliente " + 
+						 "FROM Prestamo " +
+						 "WHERE nro_prestamo = " + nroPrestamo;
+			PreparedStatement stmt = conexion.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery(sql);
+			if(rs != null && rs.next()) {
+				prestamo = new PrestamoBeanImpl();
+				prestamo.setNroPrestamo(rs.getInt("nro_prestamo"));
+				prestamo.setFecha(rs.getDate("fecha"));
+				prestamo.setCantidadMeses(rs.getInt("cant_meses"));
+				prestamo.setMonto(rs.getDouble("monto"));
+				prestamo.setTasaInteres(rs.getDouble("tasa_interes"));
+				prestamo.setInteres(rs.getDouble("interes"));
+				prestamo.setValorCuota(rs.getDouble("valor_cuota"));
+				prestamo.setLegajo(rs.getInt("legajo"));
+				prestamo.setNroCliente(rs.getInt("nro_cliente"));
+				rs.close();
+			}
+			stmt.close();
+		}
+		catch (java.sql.SQLException ex) {
+			throw new SQLException("Error al recuperar préstamo"); 
+		}
+	
 		return prestamo;
-		// Fin datos estáticos de prueba.
 	}
 
 }

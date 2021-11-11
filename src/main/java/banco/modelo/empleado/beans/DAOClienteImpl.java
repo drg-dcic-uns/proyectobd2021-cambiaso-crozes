@@ -30,50 +30,80 @@ public class DAOClienteImpl implements DAOCliente {
 		 *		Deberá generar o propagar una excepción si no existe dicho cliente o hay un error de conexión.		
 		 */
 		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */
-		
-		ClienteBean cliente = new ClienteBeanImpl();
-		cliente.setNroCliente(3);
-		cliente.setApellido("Apellido3");
-		cliente.setNombre("Nombre3");
-		cliente.setTipoDocumento("DNI");
-		cliente.setNroDocumento(3);
-		cliente.setDireccion("Direccion3");
-		cliente.setTelefono("0291-3333333");
-		cliente.setFechaNacimiento(Fechas.convertirStringADate("1983-03-03","13:30:00"));
-		
-		return cliente;		
+		ClienteBean cliente = null;
 
+		try {
+			String sql = "SELECT nro_cliente,apellido,nombre,tipo_doc,nro_doc,direccion,telefono,fecha_nac " + 
+						"FROM Cliente " +
+						"WHERE tipo_doc = '" + tipoDoc + "' AND nro_doc = " + nroDoc;
+			PreparedStatement  stmt = this.conexion.prepareStatement(sql);
+			ResultSet rs = stmt.executeQuery(sql);
+			if(rs != null && rs.next()) {
+				cliente = new ClienteBeanImpl();
+				cliente.setNroCliente(rs.getInt("nro_cliente"));
+				cliente.setApellido(rs.getString("apellido"));
+				cliente.setNombre(rs.getString("nombre"));
+				cliente.setTipoDocumento(rs.getString("tipo_doc"));
+				cliente.setNroDocumento(rs.getInt("nro_doc"));
+				cliente.setDireccion(rs.getString("direccion"));
+				cliente.setTelefono(rs.getString("telefono"));
+				cliente.setFechaNacimiento(rs.getDate("fecha_nac"));
+				rs.close();
+			}
+			stmt.close();
+		}
+		catch (SQLException ex)
+		{
+			throw new Exception("Error al recuperar cliente"); 
+		}
+
+		if(cliente == null){
+			throw new Exception("El cliente no existe");
+		}
+		
+		return cliente;	
 	}
 
 	@Override
-	public ClienteBean recuperarCliente(Integer nroCliente) throws Exception {
-		logger.info("recupera el cliente por nro de cliente.");
-		
-		/**
-		 * TODO Recuperar el cliente que tenga un número de cliente de acuerdo al parámetro recibido.  
-		 *		Deberá generar o propagar una excepción si no existe dicho cliente o hay un error de conexión.		
-		 */
-		
-		/*
-		 * Datos estáticos de prueba. Quitar y reemplazar por código que recupera los datos reales.  
-		 */
-		
-		ClienteBean cliente = new ClienteBeanImpl();
-		cliente.setNroCliente(3);
-		cliente.setApellido("Apellido3");
-		cliente.setNombre("Nombre3");
-		cliente.setTipoDocumento("DNI");
-		cliente.setNroDocumento(3);
-		cliente.setDireccion("Direccion3");
-		cliente.setTelefono("0291-3333333");
-		cliente.setFechaNacimiento(Fechas.convertirStringADate("1983-03-03","13:30:00"));
-		
-		return cliente;		
-		// Fin datos estáticos de prueba.
+    public ClienteBean recuperarCliente(Integer nroCliente) throws Exception {
+        logger.info("recupera el cliente por nro de cliente.");
 
-	}
+        /**
+         * TODO Recuperar el cliente que tenga un número de cliente de acuerdo al parámetro recibido.
+         *        Deberá generar o propagar una excepción si no existe dicho cliente o hay un error de conexión.
+         */
 
+        ClienteBean cliente = null;
+
+        try {
+            String sql = "SELECT nro_cliente, apellido, nombre, tipo_doc, nro_doc, direccion, telefono, fecha_nac " + 
+                         "FROM Cliente " +
+                         "WHERE nro_cliente = " + nroCliente;
+            PreparedStatement stmt = conexion.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery(sql);
+            if(rs != null) {
+                if (rs.next()) {
+                    cliente = new ClienteBeanImpl();
+                    cliente.setNroCliente(rs.getInt("nro_cliente"));
+                    cliente.setApellido(rs.getString("apellido"));
+                    cliente.setNombre(rs.getString("nombre"));
+                    cliente.setTipoDocumento(rs.getString("tipo_doc"));
+                    cliente.setNroDocumento(rs.getInt("nro_doc"));
+                    cliente.setDireccion(rs.getString("direccion"));
+                    cliente.setTelefono(rs.getString("telefono"));
+                    cliente.setFechaNacimiento(rs.getDate("fecha_nac"));
+                    rs.close();
+                }
+            }
+            stmt.close();
+        }
+        catch (java.sql.SQLException ex)
+        {
+            throw new SQLException("Error al recuperar cliente"); 
+        }
+
+        return cliente;
+    }
 }
+
+

@@ -9,7 +9,7 @@ USE banco;
 #Creación de tablas para las Entidades y Relaciones.
     
     CREATE TABLE Ciudad (
-        cod_postal SMALLINT UNSIGNED NOT NULL,
+        cod_postal SMALLINT unsigned NOT NULL,
         nombre VARCHAR(45) NOT NULL,
         check (cod_postal<10000),
 
@@ -122,7 +122,7 @@ USE banco;
         interes DECIMAL(9,2) UNSIGNED NOT NULL, 
         valor_cuota DECIMAL(9,2) UNSIGNED NOT NULL, 
         legajo SMALLINT UNSIGNED NOT NULL,
-        nro_cliente MEDIUMINT UNSIGNED NOT NULL, 
+        nro_cliente MEDIUMINT(5) UNSIGNED NOT NULL, 
         check(cant_meses<100),
          
         CONSTRAINT pk_Prestamo
@@ -190,12 +190,12 @@ USE banco;
     ) ENGINE=INNODB;
 
     CREATE TABLE Tarjeta (
-        nro_tarjeta BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+        nro_tarjeta BIGINT unsigned NOT NULL AUTO_INCREMENT,
         PIN VARCHAR(32) NOT NULL, 
         CVT VARCHAR(32) NOT NULL,
         fecha_venc DATE NOT NULL,
-        nro_cliente MEDIUMINT UNSIGNED NOT NULL,
-        nro_ca INT UNSIGNED NOT NULL,
+        nro_cliente MEDIUMINT unsigned NOT NULL,
+        nro_ca INT unsigned NOT NULL,
         
         CONSTRAINT pk_Tarjeta
         PRIMARY KEY (nro_tarjeta),
@@ -308,7 +308,7 @@ USE banco;
     CREATE TABLE Extraccion (
         nro_trans BIGINT UNSIGNED NOT NULL,  
         nro_cliente MEDIUMINT UNSIGNED NOT NULL,
-        nro_ca INT UNSIGNED NOT NULL,
+        nro_ca INT unsigned NOT NULL,
 
         CONSTRAINT pk_Extraccion
         PRIMARY KEY (nro_trans),
@@ -347,14 +347,15 @@ USE banco;
 #-------------------------------------------------------------------------
 
 #Creación de vistas.
-    CREATE VIEW debitos AS
+
+	CREATE VIEW debitos AS
     SELECT nro_ca, saldo, nro_trans, fecha, hora, "Debito" AS tipo, monto, NULL AS cod_caja, nro_cliente, tipo_doc, nro_doc, nombre, apellido, NULL AS destino
     FROM ((Debito NATURAL JOIN Caja_Ahorro) NATURAL JOIN Transaccion) NATURAL JOIN Cliente;
 
     CREATE VIEW transferencias AS
     SELECT nro_ca, saldo, nro_trans, fecha, hora, "Transferencia" AS tipo, monto, cod_caja, nro_cliente, tipo_doc, nro_doc, nombre, apellido, destino
     FROM ((((Transferencia NATURAL JOIN Cliente_CA) NATURAL JOIN Transaccion) NATURAL JOIN Cliente) NATURAL JOIN transaccion_por_caja) NATURAL JOIN Caja_Ahorro
-    WHERE origen = nro_ca;
+	 WHERE origen = nro_ca;
 
     CREATE VIEW extracciones AS
     SELECT nro_ca, saldo, nro_trans, fecha, hora, "Extraccion" AS tipo, monto, cod_caja, nro_cliente, tipo_doc, nro_doc, nombre, apellido, NULL AS destino
@@ -367,6 +368,7 @@ USE banco;
     #Unión de todas las subvistas anteriores
     CREATE VIEW trans_cajas_ahorro AS 
     (SELECT DISTINCT * FROM debitos UNION ALL SELECT * FROM transferencias UNION ALL SELECT * FROM extracciones UNION ALL SELECT * FROM depositos);
+
 #-------------------------------------------------------------------------
 
 #Creación de stored procedures.
@@ -388,8 +390,12 @@ BEGIN
         SELECT saldo INTO saldo_actual_origen
         FROM Caja_Ahorro 
         WHERE nro_ca = caja_origen FOR UPDATE;
+        
+        SELECT saldo
+        FROM Caja_Ahorro 
+        WHERE nro_ca = caja_destino FOR UPDATE;
 
-        IF saldo_actual_origen >= monto THEN
+        IF saldo_actual_origen >= monto THEN   
             UPDATE Caja_Ahorro SET saldo = saldo - monto WHERE nro_ca = caja_origen;
             UPDATE Caja_Ahorro SET saldo = saldo + monto WHERE nro_ca = caja_destino;
             SELECT nro_cliente INTO nro_cliente_origen 
@@ -397,20 +403,24 @@ BEGIN
             WHERE nro_ca = caja_origen;
             INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
             SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
-            INSERT INTO Transaccion_por_caja(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
+            INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
             INSERT INTO Transferencia(nro_trans,nro_cliente,origen,destino) VALUES(id_trans,nro_cliente_origen,caja_origen,caja_destino);
-            INSERT INTO Deposito(nro_trans,nro_ca) VALUES(id_trans,caja_destino);
-            SELECT 'Transferencia Exitosa' AS resultado;
+
+            INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
+            SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
+            INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
+            INSERT INTO DEPOSITO(nro_trans,nro_ca) VALUES(id_trans,caja_destino);
+			SELECT 'Transferencia Exitosa' AS resultado;
         ELSE
             SELECT 'Saldo insuficiente para realizar la transferencia' AS resultado;
         END IF;
-    ELSE
+    ELSE  
         SELECT 'Error: cuenta inexistente.' AS resultado;
     END IF;
     COMMIT;
 END; !
 
-CREATE PROCEDURE extraer(IN caja INT, IN monto DECIMAL(16,2),IN codigoATM MEDIUMINT)
+CREATE PROCEDURE extraer(IN caja INT, IN monto DECIMAL(16,2),IN codigoATM mediumint)
 BEGIN
     DECLARE saldo_actual DECIMAL(16,2);
     DECLARE nro_cliente_actual MEDIUMINT;
@@ -425,21 +435,21 @@ BEGIN
         SELECT saldo INTO saldo_actual
         FROM Caja_Ahorro 
         WHERE nro_ca = caja FOR UPDATE;
-
-        IF saldo_actual >= monto THEN
+   
+        IF saldo_actual >= monto THEN   
             UPDATE Caja_Ahorro SET saldo = saldo - monto WHERE nro_ca = caja;
             SELECT nro_cliente INTO nro_cliente_actual 
             FROM CLIENTE_CA 
             WHERE nro_ca = caja;
             INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
             SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
-            INSERT INTO Transaccion_por_caja(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
-            INSERT INTO Extraccion(nro_trans,nro_cliente,nro_ca) VALUES(id_trans,nro_cliente_actual,caja);
+            INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
+            INSERT INTO EXTRACCION(nro_trans,nro_cliente,nro_ca) VALUES(id_trans,nro_cliente_actual,caja);
             SELECT 'Extraccion Exitosa' AS resultado;
         ELSE
             SELECT 'Saldo insuficiente para realizar la extraccion' AS resultado;
         END IF;
-    ELSE
+    ELSE  
         SELECT 'Error: cuenta inexistente.' AS resultado;
     END IF;
     COMMIT;
@@ -447,18 +457,18 @@ END; !
 
 #-------------------------------------------------------------------------
 
-#Creación del trigger.
+#Creación de trigger.
 
 CREATE TRIGGER crear_pagos
 AFTER INSERT ON Prestamo
 FOR EACH ROW
 BEGIN
-	DECLARE i INT;
-	SET i = 1;
-	WHILE i <= NEW.cant_meses DO
-	   INSERT INTO Pago(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(NEW.nro_prestamo, i, DATE_ADD(NEW.fecha, interval i month), NULL);
-	   SET i = i + 1;
-	END WHILE;
+    DECLARE i INT;
+    SET i = 1;
+    WHILE i <= NEW.cant_meses DO
+       INSERT INTO Pago(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(NEW.nro_prestamo, i, DATE_ADD(NEW.fecha, interval i month), NULL);
+       SET i = i + 1;
+    END WHILE;
 END; !
 
 delimiter ;
@@ -479,13 +489,13 @@ delimiter ;
     GRANT SELECT ON banco.Sucursal TO 'empleado'@'%';
     GRANT SELECT ON banco.Tasa_Plazo_Fijo TO 'empleado'@'%';
     GRANT SELECT ON banco.Tasa_Prestamo  TO 'empleado'@'%';
-    
+
     GRANT SELECT, INSERT ON banco.Prestamo TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Plazo_Fijo TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Plazo_Cliente TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Caja_Ahorro TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Tarjeta TO 'empleado'@'%';
-    
+
     GRANT SELECT, INSERT, UPDATE ON banco.Cliente_CA TO 'empleado'@'%';
     GRANT SELECT, INSERT, UPDATE ON banco.Cliente TO 'empleado'@'%';
     GRANT SELECT, INSERT, UPDATE ON banco.Pago TO 'empleado'@'%';
@@ -494,7 +504,9 @@ delimiter ;
 
     CREATE USER 'atm'@'%' IDENTIFIED BY 'atm';
     GRANT SELECT ON banco.trans_cajas_ahorro TO 'atm'@'%';
-    GRANT SELECT ON banco.Caja_Ahorro TO 'atm'@'%'; #Para el método ObtenerSaldo de ModeloATMImpl
+    GRANT SELECT ON banco.Caja_Ahorro TO 'atm'@'%'; #Para el metodo obtenerSaldo de ModeloATMImpl 
     GRANT SELECT, UPDATE ON banco.Tarjeta TO 'atm'@'%';
     GRANT EXECUTE ON PROCEDURE banco.transferir to 'atm'@'%';
     GRANT EXECUTE ON PROCEDURE banco.extraer to 'atm'@'%';
+    
+    
