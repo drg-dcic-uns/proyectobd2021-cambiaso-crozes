@@ -377,6 +377,7 @@ delimiter !
 CREATE PROCEDURE transferir(IN caja_origen INT, IN caja_destino INT, IN monto DECIMAL(16,2),IN codigoATM mediumint)
 BEGIN
     DECLARE saldo_actual_origen DECIMAL(16,2);
+    DECLARE saldo_actual_destino DECIMAL(16,2);
     DECLARE nro_cliente_origen MEDIUMINT;
     DECLARE id_trans BIGINT;
     DECLARE EXIT HANDLER FOR SQLEXCEPTION
@@ -390,8 +391,8 @@ BEGIN
         SELECT saldo INTO saldo_actual_origen
         FROM Caja_Ahorro 
         WHERE nro_ca = caja_origen FOR UPDATE;
-        
-        SELECT saldo
+
+        SELECT saldo INTO saldo_actual_destino
         FROM Caja_Ahorro 
         WHERE nro_ca = caja_destino FOR UPDATE;
 
