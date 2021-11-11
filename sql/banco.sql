@@ -24,7 +24,6 @@ USE banco;
         telefono VARCHAR(20) NOT NULL, 
         horario VARCHAR(50) NOT NULL,  
         cod_postal SMALLINT UNSIGNED NOT NULL, 
-        #check (nro_suc<1000),
          
         CONSTRAINT pk_Sucursal
         PRIMARY KEY (nro_suc),
@@ -45,7 +44,6 @@ USE banco;
         cargo VARCHAR(45) NOT NULL,
         password VARCHAR(32) NOT NULL,
         nro_suc SMALLINT UNSIGNED NOT NULL,
-        #check(legajo<10000),
         check(nro_doc<100000000),
         
         CONSTRAINT pk_Empleado
@@ -65,7 +63,6 @@ USE banco;
         direccion VARCHAR(45) NOT NULL,
         telefono VARCHAR(20) NOT NULL, 
         fecha_nac DATE NOT NULL,  
-        #check(nro_cliente<100000),
         check(nro_doc<100000000),
          
         CONSTRAINT pk_Cliente
@@ -80,7 +77,6 @@ USE banco;
         tasa_interes DECIMAL(4,2) UNSIGNED NOT NULL,
         interes DECIMAL(16,2) UNSIGNED NOT NULL,
         nro_suc SMALLINT UNSIGNED NOT NULL,
-        #check(nro_plazo<100000000),
 
         CONSTRAINT pk_Plazo_Fijo
         PRIMARY KEY (nro_plazo),
@@ -127,7 +123,6 @@ USE banco;
         valor_cuota DECIMAL(9,2) UNSIGNED NOT NULL, 
         legajo SMALLINT UNSIGNED NOT NULL,
         nro_cliente MEDIUMINT(5) UNSIGNED NOT NULL, 
-        #check(nro_prestamo<100000000),
         check(cant_meses<100),
          
         CONSTRAINT pk_Prestamo
@@ -212,7 +207,6 @@ USE banco;
 
     CREATE TABLE Caja (
         cod_caja MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,  
-        #check(cod_caja<100000),
        
         CONSTRAINT pk_Caja
         PRIMARY KEY (cod_caja)
@@ -377,6 +371,98 @@ USE banco;
 
 #-------------------------------------------------------------------------
 
+#Creación de stored procedures.
+
+delimiter !
+CREATE PROCEDURE transferir(IN caja_origen INT, IN caja_destino INT, IN monto DECIMAL(16,2),IN codigoATM mediumint)
+BEGIN
+    DECLARE saldo_actual_origen DECIMAL(16,2);
+    DECLARE nro_cliente_origen MEDIUMINT;
+    DECLARE id_trans BIGINT;
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN 
+        SELECT 'SQLEXCEPTION, transaccion abortada' AS resultado;
+        ROLLBACK;
+    END;
+    START TRANSACTION;
+    IF EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja_origen) AND 
+       EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja_destino) THEN
+        SELECT saldo INTO saldo_actual_origen
+        FROM Caja_Ahorro 
+        WHERE nro_ca = caja_origen FOR UPDATE;
+   
+        IF saldo_actual_origen >= monto THEN   
+            UPDATE Caja_Ahorro SET saldo = saldo - monto WHERE nro_ca = caja_origen;
+            UPDATE Caja_Ahorro SET saldo = saldo + monto WHERE nro_ca = caja_destino;
+            SELECT nro_cliente INTO nro_cliente_origen 
+            FROM CLIENTE_CA 
+            WHERE nro_ca = caja_origen;
+            INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
+            SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
+            INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
+            INSERT INTO Transferencia(nro_trans,nro_cliente,origen,destino) VALUES(id_trans,nro_cliente_origen,caja_origen,caja_destino);
+            INSERT INTO DEPOSITO(nro_trans,nro_ca) VALUES(id_trans,caja_destino);
+			SELECT 'Transferencia Exitosa' AS resultado;
+        ELSE
+            SELECT 'Saldo insuficiente para realizar la transferencia' AS resultado;
+        END IF;
+    ELSE  
+        SELECT 'Error: cuenta inexistente.' AS resultado;
+    END IF;
+    COMMIT;
+END; !
+
+CREATE PROCEDURE extraer(IN caja INT, IN monto DECIMAL(16,2),IN codigoATM mediumint)
+BEGIN
+    DECLARE saldo_actual DECIMAL(16,2);
+    DECLARE nro_cliente_actual MEDIUMINT;
+    DECLARE id_trans BIGINT;
+    DECLARE EXIT HANDLER FOR SQLEXCEPTION
+    BEGIN 
+        SELECT 'SQLEXCEPTION, transaccion abortada' AS resultado;
+        ROLLBACK;
+    END;
+    START TRANSACTION;
+    IF EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja) THEN
+        SELECT saldo INTO saldo_actual
+        FROM Caja_Ahorro 
+        WHERE nro_ca = caja FOR UPDATE;
+   
+        IF saldo_actual >= monto THEN   
+            UPDATE Caja_Ahorro SET saldo = saldo - monto WHERE nro_ca = caja;
+            SELECT nro_cliente INTO nro_cliente_actual 
+            FROM CLIENTE_CA 
+            WHERE nro_ca = caja;
+            INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
+            SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
+            INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
+            INSERT INTO EXTRACCION(nro_trans,nro_cliente,nro_ca) VALUES(id_trans,nro_cliente_actual,caja);
+            SELECT 'Extraccion Exitosa' AS resultado;
+        ELSE
+            SELECT 'Saldo insuficiente para realizar la extraccion' AS resultado;
+        END IF;
+    ELSE  
+        SELECT 'Error: cuenta inexistente.' AS resultado;
+    END IF;
+    COMMIT;
+END; !
+
+CREATE TRIGGER crear_pagos
+AFTER INSERT ON Prestamo
+FOR EACH ROW
+BEGIN
+    DECLARE i INT;
+    SET i = 1;
+    WHILE i <= NEW.cant_meses DO
+       INSERT INTO Pago(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(NEW.nro_prestamo, i, DATE_ADD(NEW.fecha, interval i month), NULL);
+       SET i = i + 1;
+    END WHILE;
+END; !
+
+delimiter ;
+
+#-------------------------------------------------------------------------
+
 #Creación de usuarios y otorgamiento de privilegios.
 
 #Usuario admin.
@@ -391,12 +477,13 @@ USE banco;
     GRANT SELECT ON banco.Sucursal TO 'empleado'@'%';
     GRANT SELECT ON banco.Tasa_Plazo_Fijo TO 'empleado'@'%';
     GRANT SELECT ON banco.Tasa_Prestamo  TO 'empleado'@'%';
-    
+
     GRANT SELECT, INSERT ON banco.Prestamo TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Plazo_Fijo TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Plazo_Cliente TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Caja_Ahorro TO 'empleado'@'%';
     GRANT SELECT, INSERT ON banco.Tarjeta TO 'empleado'@'%';
+
     GRANT SELECT, INSERT, UPDATE ON banco.Cliente_CA TO 'empleado'@'%';
     GRANT SELECT, INSERT, UPDATE ON banco.Cliente TO 'empleado'@'%';
     GRANT SELECT, INSERT, UPDATE ON banco.Pago TO 'empleado'@'%';
@@ -405,6 +492,9 @@ USE banco;
 
     #CREATE USER 'atm'@'%' IDENTIFIED BY 'atm';
     GRANT SELECT ON banco.trans_cajas_ahorro TO 'atm'@'%';
+    GRANT SELECT ON banco.Caja_Ahorro TO 'atm'@'%'; #Para el metodo obtenerSaldo de ModeloATMImpl 
     GRANT SELECT, UPDATE ON banco.Tarjeta TO 'atm'@'%';
+    GRANT EXECUTE ON PROCEDURE banco.transferir to 'atm'@'%';
+    GRANT EXECUTE ON PROCEDURE banco.extraer to 'atm'@'%';
     
     

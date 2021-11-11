@@ -50,22 +50,8 @@ INSERT INTO PLAZO_CLIENTE(nro_plazo,nro_cliente) VALUES (66666666,66666);
 INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(11111111,"2021/05/16",05,4684.34,10.65,200.09,100,1111,11111);
 INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(22222222,"2021/04/25",03,5000,10.65,300,200,2222,22222);
 INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(33333333,"2021/04/01",09,4521.03,10.65,800,300,3333,33333);
-INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(44444444,"2020/08/06",12,9089,10.65,1250,400,4444,88888);
-INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(55555555,"2020/08/06",12,9089,10.65,1250,400,4444,88888);
-
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(11111111,1,"2021/10/23","2021/09/18");
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(11111111,2,"2021/10/06",NULL);
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(11111111,3,"2021/12/06",NULL);
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(22222222,1,"2021/12/10","2021/02/07");
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(22222222,2,"2021/12/10","2021/02/07");
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(22222222,3,"2021/12/10","2021/02/07");
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(33333333,1,"2022/02/12","2021/04/08"); 
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(33333333,2,"2022/02/12","2021/05/08");
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(33333333,3,"2022/02/12",NULL);
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(44444444,1,"2021/08/06","2021/09/30");
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(44444444,2,"2022/08/06",NULL);
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(55555555,1,"2021/08/06",NULL);
-INSERT INTO PAGO(nro_prestamo,nro_pago,fecha_venc,fecha_pago) VALUES(55555555,2,"2021/08/06",NULL);
+INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(44444444,"2020/08/06",12,9089,10.65,1250,500,4444,44444);
+INSERT INTO PRESTAMO(nro_prestamo,fecha,cant_meses,monto,tasa_interes,interes,valor_cuota,legajo,nro_cliente) VALUES(55555555,"2020/08/06",10,9089,10.65,1250,400,4444,88888);
 
 INSERT INTO TASA_PRESTAMO(periodo,monto_inf,monto_sup,tasa) VALUES(12,50000,100000,24.25);
 INSERT INTO TASA_PRESTAMO(periodo,monto_inf,monto_sup,tasa) VALUES(5,4000,10000,25);
