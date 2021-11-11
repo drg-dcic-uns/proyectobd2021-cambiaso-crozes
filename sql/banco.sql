@@ -390,7 +390,11 @@ BEGIN
         SELECT saldo INTO saldo_actual_origen
         FROM Caja_Ahorro 
         WHERE nro_ca = caja_origen FOR UPDATE;
-   
+        
+        SELECT saldo
+        FROM Caja_Ahorro 
+        WHERE nro_ca = caja_destino FOR UPDATE;
+
         IF saldo_actual_origen >= monto THEN   
             UPDATE Caja_Ahorro SET saldo = saldo - monto WHERE nro_ca = caja_origen;
             UPDATE Caja_Ahorro SET saldo = saldo + monto WHERE nro_ca = caja_destino;
@@ -401,6 +405,10 @@ BEGIN
             SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
             INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
             INSERT INTO Transferencia(nro_trans,nro_cliente,origen,destino) VALUES(id_trans,nro_cliente_origen,caja_origen,caja_destino);
+
+            INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
+            SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
+            INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
             INSERT INTO DEPOSITO(nro_trans,nro_ca) VALUES(id_trans,caja_destino);
 			SELECT 'Transferencia Exitosa' AS resultado;
         ELSE

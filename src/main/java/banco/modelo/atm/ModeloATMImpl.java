@@ -139,7 +139,7 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 			String sql = "SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino " +
 						 "FROM trans_cajas_ahorro, Tarjeta " +
 						 "WHERE nro_tarjeta = " + t + " AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca " +
-						 "ORDER BY fecha,hora DESC";
+						 "ORDER BY fecha DESC,hora DESC";
 			ResultSet rs = this.consulta(sql);
 			TransaccionCajaAhorroBean fila;
 			if(rs != null){
@@ -186,7 +186,7 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 			String sql = "SELECT fecha, hora, tipo,  IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino " +
 						 "FROM trans_cajas_ahorro, Tarjeta " +
 						 "WHERE nro_tarjeta = " + t + " AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca AND fecha >= '" + Fechas.convertirDateADateSQL(desde) + "' AND fecha <= '" + Fechas.convertirDateADateSQL(hasta) + "' " +
-						 "ORDER BY fecha,hora DESC";
+						 "ORDER BY fecha DESC,hora DESC";
 			ResultSet rs = this.consulta(sql);
 			TransaccionCajaAhorroBean fila;
 			if(rs != null){
