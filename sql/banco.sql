@@ -374,11 +374,10 @@ USE banco;
 #Creación de stored procedures.
 
 delimiter !
-CREATE PROCEDURE transferir(IN caja_origen INT, IN caja_destino INT, IN monto DECIMAL(16,2),IN codigoATM mediumint)
+CREATE PROCEDURE transferir(IN caja_origen INT, IN caja_destino INT, IN monto DECIMAL(16,2),IN codigoATM mediumint,IN nro_cliente_origen MEDIUMINT)
 BEGIN
     DECLARE saldo_actual_origen DECIMAL(16,2);
     DECLARE saldo_actual_destino DECIMAL(16,2);
-    DECLARE nro_cliente_origen MEDIUMINT;
     DECLARE id_trans BIGINT;
     DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN 
@@ -387,7 +386,8 @@ BEGIN
     END;
     START TRANSACTION;
     IF EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja_origen) AND 
-       EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja_destino) THEN
+       EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja_destino) AND
+       EXISTS (SELECT * FROM CLIENTE_CA WHERE nro_ca = caja_origen AND nro_cliente = nro_cliente_origen) THEN
         SELECT saldo INTO saldo_actual_origen
         FROM Caja_Ahorro 
         WHERE nro_ca = caja_origen FOR UPDATE;
@@ -399,9 +399,7 @@ BEGIN
         IF saldo_actual_origen >= monto THEN   
             UPDATE Caja_Ahorro SET saldo = saldo - monto WHERE nro_ca = caja_origen;
             UPDATE Caja_Ahorro SET saldo = saldo + monto WHERE nro_ca = caja_destino;
-            SELECT nro_cliente INTO nro_cliente_origen 
-            FROM CLIENTE_CA 
-            WHERE nro_ca = caja_origen;
+
             INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
             SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
             INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);
@@ -421,10 +419,9 @@ BEGIN
     COMMIT;
 END; !
 
-CREATE PROCEDURE extraer(IN caja INT, IN monto DECIMAL(16,2),IN codigoATM mediumint)
+CREATE PROCEDURE extraer(IN caja INT, IN monto DECIMAL(16,2),IN codigoATM mediumint,IN nro_cliente_actual MEDIUMINT)
 BEGIN
     DECLARE saldo_actual DECIMAL(16,2);
-    DECLARE nro_cliente_actual MEDIUMINT;
     DECLARE id_trans BIGINT;
     DECLARE EXIT HANDLER FOR SQLEXCEPTION
     BEGIN 
@@ -432,16 +429,15 @@ BEGIN
         ROLLBACK;
     END;
     START TRANSACTION;
-    IF EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja) THEN
+    IF EXISTS (SELECT * FROM Caja_Ahorro WHERE nro_ca = caja) AND
+       EXISTS (SELECT * FROM CLIENTE_CA WHERE nro_ca = caja AND nro_cliente = nro_cliente_actual) THEN
         SELECT saldo INTO saldo_actual
         FROM Caja_Ahorro 
         WHERE nro_ca = caja FOR UPDATE;
    
         IF saldo_actual >= monto THEN   
             UPDATE Caja_Ahorro SET saldo = saldo - monto WHERE nro_ca = caja;
-            SELECT nro_cliente INTO nro_cliente_actual 
-            FROM CLIENTE_CA 
-            WHERE nro_ca = caja;
+
             INSERT INTO Transaccion(fecha,hora,monto) VALUES(CURDATE(),CURTIME(),monto);
             SELECT DISTINCT LAST_INSERT_ID() INTO id_trans;
             INSERT INTO TRANSACCION_POR_CAJA(nro_trans,cod_caja) VALUES(id_trans,codigoATM);

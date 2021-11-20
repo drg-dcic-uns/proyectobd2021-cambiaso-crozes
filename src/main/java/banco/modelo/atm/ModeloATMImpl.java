@@ -66,7 +66,7 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 				long t = Long.parseLong(tarjeta);
 				String sql = "SELECT nro_tarjeta, PIN " +
 							"FROM Tarjeta " +
-							"WHERE nro_tarjeta = " + t + " AND PIN = MD5(" + pin + ");";
+							"WHERE nro_tarjeta = " + t + " AND PIN = MD5('" + pin + "');";
 				ResultSet rs = this.consulta(sql);
 				if (rs != null && rs.next()){
 					this.tarjeta = rs.getString("nro_tarjeta");
@@ -139,11 +139,12 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 			String sql = "SELECT fecha, hora, tipo, IF(tipo = 'Deposito', monto, monto * -1) AS monto, cod_caja, destino " +
 						 "FROM trans_cajas_ahorro, Tarjeta " +
 						 "WHERE nro_tarjeta = " + t + " AND trans_cajas_ahorro.nro_ca = Tarjeta.nro_ca " +
-						 "ORDER BY fecha DESC,hora DESC";
+						 "ORDER BY fecha DESC,hora DESC " +
+						 "LIMIT " + cantidad;
 			ResultSet rs = this.consulta(sql);
 			TransaccionCajaAhorroBean fila;
 			if(rs != null){
-				for(int i = 0;(i < cantidad) && rs.next();i++){
+				while(rs.next()){
 					fila = new TransaccionCajaAhorroBeanImpl();
 
 					fila.setTransaccionFechaHora(Fechas.convertirStringADate(rs.getString("fecha"),rs.getString("hora")));
@@ -233,22 +234,23 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 		}
 
 		String resultado = ModeloATM.EXTRACCION_EXITOSA;
-		int caja = 0;
+		int caja = 0, nroCliente = 0;
 
 		try{
 			long t = Long.parseLong(this.tarjeta);
-			String sql1 = "SELECT nro_ca " +
+			String sql1 = "SELECT nro_ca,nro_cliente " +
 						  "FROM Tarjeta " +
 						  "WHERE nro_tarjeta = " + t;
 			ResultSet rs1 = this.consulta(sql1);
 			if(rs1 != null){
 				if(rs1.next()){
 					caja = rs1.getInt("nro_ca");
+					nroCliente = rs1.getInt("nro_cliente");
 				}
 				rs1.close();
 			}
 
-			String sql2 = "call extraer(" + caja + ", " + monto + ", "+ codigoATM +")";
+			String sql2 = "call extraer(" + caja + ", " + monto + ", "+ codigoATM +", "+ nroCliente +")";
 			ResultSet rs2 = this.consulta(sql2);
 			if(rs2 != null){
 				if(rs2.next()){
@@ -307,22 +309,23 @@ public class ModeloATMImpl extends ModeloImpl implements ModeloATM {
 		}
 
 		String resultado = ModeloATM.TRANSFERENCIA_EXITOSA;
-		int cajaOrigen = 0;
+		int cajaOrigen = 0, nroClienteOrigen = 0;
 
 		try{
 			long t = Long.parseLong(this.tarjeta);
-			String sql1 = "SELECT nro_ca " +
+			String sql1 = "SELECT nro_ca,nro_cliente " +
 						  "FROM Tarjeta " +
 						  "WHERE nro_tarjeta = " + t;
 			ResultSet rs1 = this.consulta(sql1);
 			if(rs1 != null){
 				if(rs1.next()){
 					cajaOrigen = rs1.getInt("nro_ca");
+					nroClienteOrigen = rs1.getInt("nro_cliente");
 				}
 				rs1.close();
 			}
 
-			String sql2 = "call transferir(" + cajaOrigen + ", " + cajaDestino + ", " + monto + ", "+ codigoATM + ")";
+			String sql2 = "call transferir(" + cajaOrigen + ", " + cajaDestino + ", " + monto + ", "+ codigoATM +", "+ nroClienteOrigen + ")";
 			ResultSet rs2 = this.consulta(sql2);
 			if(rs2 != null){
 				if(rs2.next()){
