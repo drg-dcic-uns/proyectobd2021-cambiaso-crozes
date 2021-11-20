@@ -59,7 +59,7 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 				int leg = Integer.parseInt(legajo);
 				String sql = "SELECT legajo, password " + 
 							"FROM Empleado " +
-							"WHERE legajo = " + leg + " AND password = MD5(" + password + ")";
+							"WHERE legajo = " + leg + " AND password = MD5('" + password + "')";
 				ResultSet rs = this.consulta(sql);
 				if(rs != null) {
 					if(rs.next()) {
@@ -99,9 +99,8 @@ public class ModeloEmpleadoImpl extends ModeloImpl implements ModeloEmpleado {
 		ArrayList<String> tipos = new ArrayList<String>();
 		
 		try {
-			String sql = "SELECT tipo_doc, COUNT(tipo_doc) " + 
-						 "FROM Empleado " +
-						 "GROUP BY tipo_doc";
+			String sql = "SELECT DISTINCT tipo_doc " + 
+                         "FROM Empleado";
 			ResultSet rs = this.consulta(sql);
 			if(rs != null) {
 				while(rs.next()) {
